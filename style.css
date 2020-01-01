@@ -25,8 +25,17 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection {
+  color: #07DD5E;
+  background-color: #FFFFFF;
+}
+
 .main_scroller {
-  height: 2000px;
+  height: 4000px;
+  margin: 0 30px;
 }
 
 .colors {
@@ -44,6 +53,30 @@ body::-webkit-scrollbar {
   background-color: #07DD5E;
 }
 
+.white_c {
+  color: #FFFFFF;
+}
+
+.white_b {
+  background-color: #FFFFFF;
+}
+
+.grey_c {
+  color: #EFEFEF;
+}
+
+.grey_b {
+  background-color: #EFEFEF;
+}
+
+.black_c {
+  color: #111111;
+}
+
+.black_b {
+  background-color: #111111;
+}
+
 
 
 h1 {
@@ -59,9 +92,11 @@ h1 {
   padding-top: 20px;
 }
 
-h1:hover {
+h1:hover,
+h2:hover,
+h3:hover,
+p:hover {
   font-variation-settings: 'wght'300;
-  letter-spacing: 1px;
 }
 
 .main_h1_1,
@@ -87,6 +122,47 @@ h1:hover {
   transform: translateX(-10rem) translateY(0rem);
 }
 
+h2 {
+  font-family: PidgeonSans;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  font-size: 8rem;
+  font-weight: 700;
+  font-variation-settings: 'wght'800;
+  letter-spacing: 1px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -1rem;
+}
+
+h3 {
+  font-family: PidgeonSans;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  font-size: 6rem;
+  font-weight: 700;
+  font-variation-settings: 'wght'550;
+  letter-spacing: 0px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  color: #07DD5E;
+  margin-bottom: -.5rem;
+}
+
+p {
+  font-family: PidgeonSans;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  font-size: 4rem;
+  font-weight: 700;
+  font-variation-settings: 'wght'550;
+  letter-spacing: 0px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
 
 .logo_wrap {
   height: 100vh;
@@ -115,7 +191,7 @@ nav {
   height: 30vh;
   position: fixed;
   display: flex;
-  z-index: 4;
+  z-index: 6;
   flex-wrap: wrap;
   width: 15rem;
   align-content: flex-end;
@@ -193,7 +269,7 @@ nav a {
   justify-content: flex-end;
   align-items: flex-end;
   position: fixed;
-  z-index: 3;
+  z-index: 6;
   visibility: hidden;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
@@ -308,7 +384,7 @@ nav a {
   width: 100vw;
   background-color: #FFFFFF;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
 }
 
 .bg_wrapper_left,
@@ -317,7 +393,7 @@ nav a {
   width: 330px;
   background-color: #FFFFFF;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
 }
 
 .bg_wrapper_top {
@@ -345,7 +421,7 @@ nav a {
   width: 300px;
   background-color: #FFFFFF;
   position: fixed;
-  top: -100vw;
+  top: -100vh;
   right: -242px;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
@@ -356,7 +432,7 @@ nav a {
   height: 200vh;
   width: 100vw;
   background-color: #07DD5E;
-  position: absolute;
+  position: fixed;
   top: 0vh;
   left: 0vw;
   transition: .4s;
@@ -367,7 +443,7 @@ nav a {
   height: 200vh;
   width: 50vw;
   background-color: #EFEFEF;
-  position: absolute;
+  position: fixed;
   top: 0vh;
   right: 0vw;
   transition: .4s;
@@ -405,4 +481,90 @@ nav a {
   left: 0;
   background-color: #07DD5E;
   opacity: 0;
+  z-index: 4;
+  visibility: hidden;
+}
+
+.space_top {
+  height: 150vh;
+}
+
+.selvportraet {
+  width: 100%;
+  height: 120vh;
+  background-image: url(assets/images/selvportraet2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+}
+
+.col_wrapper {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 130vh 40px 100px 40px;
+  align-items: flex-start;
+  top: 0;
+}
+
+.col {
+  width: 100%;
+  flex-basis: 400px;
+  flex-grow: 1;
+  top: 0;
+}
+
+.line {
+  width: 5px;
+  height: 100px;
+  position: relative;
+  margin: 20px 2px;
+}
+
+.window {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  top: -10vw;
+}
+
+.window2 {
+  position: absolute;
+  overflow: hidden;
+  top: -210vw;
+
+}
+
+.img_wrapper {
+  overflow: hidden;
+  height: 80vh;
+  transform-origin: center;
+}
+
+.black_b h2,
+.black_b p {
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 800px) {
+  .selvportraet {
+    background-size: contain;
+  }
+
+  .bg_wrapper_top,
+  .bg_wrapper_bottom,
+  .bg_wrapper_left,
+  .bg_wrapper_right {
+    visibility: hidden;
+  }
+
+  .bg_wrapper_right2 {
+    right: -272px;
+  }
+
+  nav {
+    right: -17rem;
+  }
 }
