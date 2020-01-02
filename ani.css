@@ -352,7 +352,7 @@
   }
 
   100% {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -362,7 +362,7 @@
 
 @keyframes window_hide-kf {
   0% {
-    width: 100%;
+    width: 100vw;
   }
 
   100% {
@@ -380,7 +380,7 @@
   }
 
   100% {
-    transform: translateY(-120vh);
+    transform: translateY(-220vh);
   }
 }
 
@@ -390,7 +390,7 @@
 
 @keyframes lift_back-kf {
   0% {
-    transform: translateY(-120vh);
+    transform: translateY(-220vh);
   }
 
   100% {
@@ -398,3 +398,32 @@
   }
 }
 
+.green_intro_on {
+  animation: green_intro_on-kf 2s cubic-bezier(.3, 0, .2, 1) both;
+}
+
+@keyframes green_intro_on-kf {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: .8;
+    visibility: visible;
+  }
+}
+
+.green_intro_off {
+  animation: green_intro_off-kf .1s cubic-bezier(.3, 0, .2, 1) both;
+}
+
+@keyframes green_intro_off-kf {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}

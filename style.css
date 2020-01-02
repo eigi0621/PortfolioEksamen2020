@@ -34,7 +34,7 @@ p::selection {
 }
 
 .main_scroller {
-  height: 4000px;
+  height: 2000px;
   margin: 0 30px;
 }
 
@@ -126,38 +126,39 @@ h2 {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 8rem;
+  font-size: 7.5rem;
   font-weight: 700;
-  font-variation-settings: 'wght'800;
+  font-variation-settings: 'wght'600;
   letter-spacing: 1px;
   text-align: left;
   position: relative;
   z-index: 1;
-  margin-bottom: -1rem;
+  margin-bottom: 0rem;
+  line-height: 8rem;
 }
 
 h3 {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 700;
-  font-variation-settings: 'wght'550;
+  font-variation-settings: 'wght'400;
   letter-spacing: 0px;
   text-align: left;
   position: relative;
   z-index: 1;
-  color: #07DD5E;
-  margin-bottom: -.5rem;
+  margin-bottom: 0rem;
+  line-height: 6rem;
 }
 
 p {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  font-variation-settings: 'wght'550;
+  font-variation-settings: 'wght'200;
   letter-spacing: 0px;
   text-align: left;
   position: relative;
@@ -455,13 +456,14 @@ nav a {
 
 
 .center_wrap {
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   visibility: hidden;
+  transform: translateX(3vw);
 }
 
 .center_h1 {
@@ -485,8 +487,15 @@ nav a {
   visibility: hidden;
 }
 
+.green_intro {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+}
+
 .space_top {
-  height: 150vh;
+  margin-top: -30vw;
 }
 
 .selvportraet {
@@ -504,9 +513,11 @@ nav a {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  padding: 130vh 40px 100px 40px;
+  padding: 200vh 40px 50vh 40px;
   align-items: flex-start;
   top: 0;
+  position: relative;
+  z-index: 3;
 }
 
 .col {
@@ -517,8 +528,8 @@ nav a {
 }
 
 .line {
-  width: 5px;
-  height: 100px;
+  width: 3px;
+  height: 200px;
   position: relative;
   margin: 20px 2px;
 }
@@ -528,6 +539,7 @@ nav a {
   overflow: hidden;
   width: 0;
   top: -10vw;
+  left: 0;
 }
 
 .window2 {
@@ -541,11 +553,45 @@ nav a {
   overflow: hidden;
   height: 80vh;
   transform-origin: center;
+  margin-right: -10px;
 }
 
 .black_b h2,
 .black_b p {
   color: #FFFFFF;
+}
+
+.col_wrapper h1 {
+  margin-bottom: 2rem;
+}
+
+.col_wrapper2 {
+  padding-bottom: 50vh;
+}
+
+.col_wrapper3 {
+  margin-top: -180vh;
+  padding-bottom: 50vh;
+}
+
+.col_wrapper4 {
+  margin-top: -180vh;
+  padding-bottom: 50vh;
+}
+
+.col_wrapper3 p {
+  color: #FFFFFF;
+}
+
+.col_wrapper3 span {
+  font-size: 3rem;
+  color: #111111;
+  line-height: 2.7rem;
+  font-variation-settings: 'wght'500;
+}
+
+.col_wrapper h2 {
+  flex-basis: 100vw;
 }
 
 @media only screen and (max-width: 800px) {
@@ -566,5 +612,27 @@ nav a {
 
   nav {
     right: -17rem;
+  }
+
+  .col_wrapper {
+    padding: 20vh 20px 20vh 20px;
+  }
+
+  .col_wrapper2 {
+    padding-bottom: 0vh;
+  }
+
+  .col_wrapper3 {
+    margin-top: 0vh;
+    padding-bottom: 0vh;
+  }
+
+  .col_wrapper4 {
+    margin-top: 0vh;
+    padding-bottom: 0vh;
+  }
+
+  .space_top {
+    height: 150vh;
   }
 }
