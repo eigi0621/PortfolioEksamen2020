@@ -19,11 +19,11 @@ function loadedState() {
 
     document.querySelector(".main_scroller").scrollTo(0, 0);
     window.scrollTo(0, 0);
-  }, 100);
 
-  setTimeout(function () {
+
     document.querySelector(".main_h1_1").classList.add("center_ani_before");
     document.querySelector(".main_h1_2").classList.add("center_ani_before");
+    document.querySelector(".main_h1_3").classList.add("center_ani_before2");
   }, 100);
 
   setTimeout(function () {
@@ -42,15 +42,21 @@ function loadedState() {
   }, 200);
 
   setTimeout(function () {
-    document.querySelector(".text_wrapper1").classList.add("center_ani1");
+    document.querySelector(".index-text_wrapper1").classList.add("index-center_ani1");
+    document.querySelector(".web-text_wrapper1").classList.add("web-center_ani1");
+    document.querySelector(".ux-text_wrapper1").classList.add("ux-center_ani1");
+    document.querySelector(".animation-text_wrapper1").classList.add("animation-center_ani1");
+    document.querySelector(".indhold-text_wrapper1").classList.add("indhold-center_ani1");
   }, 350);
 
   setTimeout(function () {
-    document.querySelector(".text_wrapper2").classList.add("center_ani2");
-    document.querySelector(".main_h1_1").classList.remove("center_ani_before");
-    document.querySelector(".main_h1_2").classList.remove("center_ani_before");
-    document.querySelector(".main_h1_1").classList.add("center_ani3");
-    document.querySelector(".main_h1_2").classList.add("center_ani3");
+    document.querySelector(".center_h1").style.visibility = "visible";
+    document.querySelector(".index-text_wrapper2").classList.add("index-center_ani2");
+    document.querySelector(".web-text_wrapper2").classList.add("web-center_ani2");
+    document.querySelector(".ux-text_wrapper2").classList.add("ux-center_ani2");
+    document.querySelector(".animation-text_wrapper2").classList.add("animation-center_ani2");
+    document.querySelector(".indhold-text_wrapper2").classList.add("indhold-center_ani2");
+
     document.body.style.overflow = "visible";
     showScroll();
     document.querySelector(".scroll_wrap").classList.remove("push_scroll");
@@ -59,11 +65,21 @@ function loadedState() {
   }, 500);
 
   setTimeout(function () {
+    document.querySelector(".main_h1_1").classList.remove("center_ani_before");
+    document.querySelector(".main_h1_2").classList.remove("center_ani_before");
+    document.querySelector(".main_h1_3").classList.remove("center_ani_before2");
+    document.querySelector(".main_h1_1").classList.add("center_ani3");
+    document.querySelector(".main_h1_2").classList.add("center_ani3");
+    document.querySelector(".main_h1_3").classList.add("center_ani4");
+  }, 1000);
+
+  setTimeout(function () {
     document.querySelector(".main_h1_1").classList.remove("center_ani3");
     document.querySelector(".main_h1_2").classList.remove("center_ani3");
+    document.querySelector(".main_h1_3").classList.remove("center_ani4");
 
 
-  }, 1350);
+  }, 1500);
 
 
 }
@@ -230,12 +246,30 @@ function showScroll() {
       document.querySelector(".bg_front_left").classList.add("intro_push_back");
 
       setTimeout(function () {
-        document.querySelector(".text_wrapper1").classList.remove("center_ani1");
-        document.querySelector(".text_wrapper1").classList.add("center_ani1_back");
+        document.querySelector(".index-text_wrapper1").classList.remove("index-center_ani1");
+        document.querySelector(".web-text_wrapper1").classList.remove("web-center_ani1");
+        document.querySelector(".ux-text_wrapper1").classList.remove("ux-center_ani1");
+        document.querySelector(".animation-text_wrapper1").classList.remove("animation-center_ani1");
+        document.querySelector(".indhold-text_wrapper1").classList.remove("indhold-center_ani1");
+
+        document.querySelector(".index-text_wrapper1").classList.add("index-center_ani1_back");
+        document.querySelector(".web-text_wrapper1").classList.add("web-center_ani1_back");
+        document.querySelector(".ux-text_wrapper1").classList.add("ux-center_ani1_back");
+        document.querySelector(".animation-text_wrapper1").classList.add("animation-center_ani1_back");
+        document.querySelector(".indhold-text_wrapper1").classList.add("indhold-center_ani1_back");
       }, 150);
       setTimeout(function () {
-        document.querySelector(".text_wrapper2").classList.remove("center_ani2");
-        document.querySelector(".text_wrapper2").classList.add("center_ani2_back");
+        document.querySelector(".index-text_wrapper2").classList.remove("index-center_ani2");
+        document.querySelector(".web-text_wrapper2").classList.remove("web-center_ani2");
+        document.querySelector(".ux-text_wrapper2").classList.remove("ux-center_ani2");
+        document.querySelector(".animation-text_wrapper2").classList.remove("animation-center_ani2");
+        document.querySelector(".indhold-text_wrapper2").classList.remove("indhold-center_ani2");
+
+        document.querySelector(".index-text_wrapper2").classList.add("index-center_ani2_back");
+        document.querySelector(".web-text_wrapper2").classList.add("web-center_ani2_back");
+        document.querySelector(".ux-text_wrapper2").classList.add("ux-center_ani2_back");
+        document.querySelector(".animation-text_wrapper2").classList.add("animation-center_ani2_back");
+        document.querySelector(".indhold-text_wrapper2").classList.add("indhold-center_ani2_back");
       }, 200);
 
 
@@ -251,12 +285,30 @@ function showScroll() {
       document.querySelector(".bg_front_left").classList.add("intro_push");
 
       setTimeout(function () {
-        document.querySelector(".text_wrapper1").classList.remove("center_ani1_back");
-        document.querySelector(".text_wrapper1").classList.add("center_ani1");
+        document.querySelector(".index-text_wrapper1").classList.remove("index-center_ani1_back");
+        document.querySelector(".web-text_wrapper1").classList.remove("web-center_ani1_back");
+        document.querySelector(".ux-text_wrapper1").classList.remove("ux-center_ani1_back");
+        document.querySelector(".animation-text_wrapper1").classList.remove("animation-center_ani1_back");
+        document.querySelector(".indhold-text_wrapper1").classList.remove("indhold-center_ani1_back");
+
+        document.querySelector(".index-text_wrapper1").classList.add("index-center_ani1");
+        document.querySelector(".web-text_wrapper1").classList.add("web-center_ani1");
+        document.querySelector(".ux-text_wrapper1").classList.add("ux-center_ani1");
+        document.querySelector(".animation-text_wrapper1").classList.add("animation-center_ani1");
+        document.querySelector(".indhold-text_wrapper1").classList.add("indhold-center_ani1");
       }, 150);
       setTimeout(function () {
-        document.querySelector(".text_wrapper2").classList.remove("center_ani2_back");
-        document.querySelector(".text_wrapper2").classList.add("center_ani2");
+        document.querySelector(".index-text_wrapper2").classList.remove("index-center_ani2_back");
+        document.querySelector(".web-text_wrapper2").classList.remove("web-center_ani2_back");
+        document.querySelector(".ux-text_wrapper2").classList.remove("ux-center_ani2_back");
+        document.querySelector(".animation-text_wrapper2").classList.remove("animation-center_ani2_back");
+        document.querySelector(".indhold-text_wrapper2").classList.remove("indhold-center_ani2_back");
+
+        document.querySelector(".index-text_wrapper2").classList.add("index-center_ani2");
+        document.querySelector(".web-text_wrapper2").classList.add("web-center_ani2");
+        document.querySelector(".ux-text_wrapper2").classList.add("ux-center_ani2");
+        document.querySelector(".animation-text_wrapper2").classList.add("animation-center_ani2");
+        document.querySelector(".indhold-text_wrapper2").classList.add("indhold-center_ani2");
 
         document.querySelector(".scroll_wrap").classList.remove("push_scroll");
         document.querySelector(".scroll_wrap").classList.add("push_scroll_back");
