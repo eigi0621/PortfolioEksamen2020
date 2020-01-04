@@ -704,11 +704,11 @@
 
 @keyframes lift-kf {
   0% {
-    transform: translateY(0);
+    transform: translateY(201px);
   }
 
   100% {
-    transform: translateY(-2200px);
+    transform: translateY(0);
   }
 }
 
@@ -718,11 +718,11 @@
 
 @keyframes lift_back-kf {
   0% {
-    transform: translateY(-2200px);
+    transform: translateY(0);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(201px);
   }
 }
 

@@ -11,9 +11,6 @@ function loadedState() {
 
   document.querySelector(".scroll_wrap").classList.add("push_scroll");
 
-
-
-
   setTimeout(function () {
     document.querySelector(".green_intro").classList.add("green_intro_off");
 
@@ -227,19 +224,43 @@ function showScroll() {
     // log the length scrolled vertically
     console.log(window.pageYOffset);
 
-    var imgSpeed = window.pageYOffset * -.1 + 100;
-    var wrapSpeed = window.pageYOffset * .3 - 300;
-    var imgSpeed2 = window.pageYOffset * 0 + 0;
-    var wrapSpeed2 = window.pageYOffset * .1 - 380;
-    var imgSpeed3 = window.pageYOffset * -.4 + 1900;
-    var wrapSpeed3 = window.pageYOffset * .1 - 450;
-    var imgSpeed4 = window.pageYOffset * -.4 + 2600;
-    var wrapSpeed4 = window.pageYOffset * .1 - 650;
-    var wrapSpeed5 = window.pageYOffset * .5 - 6550 * .5;
+    var speedOfImg = -.1
+    var speedOfWrap = .4
+    var speedOfImg2 = -.15
+    var speedOfWrap2 = .2
+    var speedOfImg3 = 0
+    var speedOfWrap3 = .05
+    var speedOfImg4 = -.2
+    var speedOfWrap4 = .05
+    var speedOfWrap5 = .7
 
+    var break1 = document.querySelector(".col_wrapper2").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
+    var break2 = document.querySelector(".col_wrapper3").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
+    var break3 = document.querySelector(".col_wrapper4").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
+    var break4 = document.querySelector(".col_wrapper5").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
+
+    var imgSpeed = window.pageYOffset * speedOfImg - 300 * speedOfImg;
+    var wrapSpeed = window.pageYOffset * speedOfWrap - 300 * speedOfWrap;
+    var imgSpeed2 = window.pageYOffset * speedOfImg3 - break2 * speedOfImg3;
+    var wrapSpeed2 = window.pageYOffset * speedOfWrap3 - break2 * speedOfWrap3;
+    var imgSpeed3 = window.pageYOffset * speedOfImg2 - break1 * speedOfImg2;
+    var wrapSpeed3 = window.pageYOffset * speedOfWrap2 - break1 * speedOfWrap2;
+    var imgSpeed4 = window.pageYOffset * speedOfImg4 - break3 * speedOfImg4;
+    var wrapSpeed4 = window.pageYOffset * speedOfWrap4 - break3 * speedOfWrap4;
+    var wrapSpeed5 = window.pageYOffset * speedOfWrap5 - break4 * speedOfWrap5;
+
+
+
+    var colWrapperPadding = (window.innerWidth - 1000) / 2;
+
+    if (window.matchMedia("(min-width: 1000px)").matches) {
+      document.querySelector(".col_wrapper1").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".col_wrapper2").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".col_wrapper3").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".col_wrapper4").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+    }
 
     if (window.pageYOffset > 10) {
-      console.log("scroller over 110");
 
 
       document.querySelector(".bg_front_left").classList.remove("intro_push");
@@ -280,7 +301,6 @@ function showScroll() {
       document.querySelector(".window").classList.add("window_show");
 
     } else {
-      console.log("below 110");
       document.querySelector(".bg_front_left").classList.remove("intro_push_back");
       document.querySelector(".bg_front_left").classList.add("intro_push");
 
@@ -317,95 +337,50 @@ function showScroll() {
       document.querySelector(".window").classList.remove("window_show");
       document.querySelector(".window").classList.add("window_hide");
     }
-    if (window.matchMedia("(min-width: 800px)").matches) {
+    if (window.matchMedia("(min-width: 1000px)").matches) {
       if (window.pageYOffset > 300) {
-        console.log("scroller over 200");
-
-
         document.querySelector(".selvportraet").style.transform = "translateY(" + imgSpeed + "px)";
         document.querySelector(".img_wrapper").style.transform = "translateY(" + wrapSpeed + "px)";
-
-
-      } else {
-        console.log("below 400");
       }
 
-      if (window.pageYOffset > 2900) {
-        console.log("scroller over 2000");
+      if (window.pageYOffset > break1) {
+        document.querySelector(".pidgeonsans").style.transform = "translateY(" + imgSpeed3 + "px)";
+        document.querySelector(".img_wrapper3").style.transform = "translateY(" + wrapSpeed3 + "px)";
 
         document.querySelector(".col_wrapper2").classList.remove("lift_back");
         document.querySelector(".col_wrapper2").classList.add("lift");
       } else {
-        console.log("below 2000");
-
         document.querySelector(".col_wrapper2").classList.remove("lift");
         document.querySelector(".col_wrapper2").classList.add("lift_back");
       }
 
-      if (window.pageYOffset > 2900) {
-        console.log("scroller over 2000");
-
+      if (window.pageYOffset > break2) {
         document.querySelector(".portvin").style.transform = "translateY(" + imgSpeed2 + "px)";
         document.querySelector(".img_wrapper2").style.transform = "translateY(" + wrapSpeed2 + "px)";
-      }
-
-      if (window.pageYOffset > 4200) {
-        console.log("scroller over 2000");
 
         document.querySelector(".col_wrapper3").classList.remove("lift_back");
         document.querySelector(".col_wrapper3").classList.add("lift");
-
-
-
       } else {
-        console.log("below 2000");
-
         document.querySelector(".col_wrapper3").classList.remove("lift");
         document.querySelector(".col_wrapper3").classList.add("lift_back");
-
       }
 
-      if (window.pageYOffset > 4200) {
-        console.log("scroller over 2000");
-
-        document.querySelector(".pidgeonsans").style.transform = "translateY(" + imgSpeed3 + "px)";
-        document.querySelector(".img_wrapper3").style.transform = "translateY(" + wrapSpeed3 + "px)";
-      }
-
-      if (window.pageYOffset > 6000) {
-        console.log("scroller over 2000");
+      if (window.pageYOffset > break3) {
+        document.querySelector(".keasans").style.transform = "translateY(" + imgSpeed4 + "px)";
+        document.querySelector(".img_wrapper4").style.transform = "translateY(" + wrapSpeed4 + "px)";
 
         document.querySelector(".col_wrapper4").classList.remove("lift_back");
         document.querySelector(".col_wrapper4").classList.add("lift");
-
-
       } else {
-        console.log("below 2000");
-
         document.querySelector(".col_wrapper4").classList.remove("lift");
         document.querySelector(".col_wrapper4").classList.add("lift_back");
-
       }
 
-      if (window.pageYOffset > 6000 && window.pageYOffset < 6550) {
-        console.log("scroller over 2000");
+      if (window.pageYOffset > break4) {
+        console.log(break4);
+        document.querySelector(".last_wrap").style.transform = "translateY(" + wrapSpeed5 + "px)";
+      } else {}
 
-        document.querySelector(".keasans").style.transform = "translateY(" + imgSpeed4 + "px)";
-        document.querySelector(".img_wrapper4").style.transform = "translateY(" + wrapSpeed4 + "px)";
-      }
-
-      if (window.pageYOffset > 6550) {
-        console.log("scroller over 6550");
-
-        document.querySelector(".stop1").style.transition = "0s";
-        document.querySelector(".move1").style.transform = "translateY(" + wrapSpeed5 + "px)";
-        document.querySelector(".move2").style.transform = "translateY(" + wrapSpeed5 + "px)";
-        document.querySelector(".move3").style.transform = "translateY(" + wrapSpeed5 + "px)";
-
-
-      } else {
-        document.querySelector(".stop1").style.transition = ".4s";
-      }
     }
   }
 }
