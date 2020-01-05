@@ -238,7 +238,7 @@ function showScroll() {
     if (window.matchMedia("(min-width: 1000px)").matches) {
       document.querySelector(".col_wrapper1").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper2").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
-      document.querySelector(".col_wrapper5").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".col_wrapper5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
     }
 
     if (window.pageYOffset > 10) {

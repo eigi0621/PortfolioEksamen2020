@@ -250,6 +250,7 @@ function showScroll() {
       document.querySelector(".col_wrapper2").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper3").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper4").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".col_wrapper5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
     }
 
     if (window.pageYOffset > 10) {

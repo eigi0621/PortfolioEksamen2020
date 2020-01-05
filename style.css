@@ -147,10 +147,6 @@ h1:hover {
   font-variation-settings: 'wght'300;
 }
 
-h2 span:hover {
-  font-variation-settings: 'wght'100;
-}
-
 .main_h1_1,
 .main_h1_2 {
   color: #111111;
@@ -192,7 +188,7 @@ h2 {
   font-size: 7.5rem;
   font-weight: 700;
   font-variation-settings: 'wght'600;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   text-align: left;
   position: relative;
   z-index: 1;
@@ -657,13 +653,23 @@ nav a {
   margin-top: -600px;
 }
 
-.selvportraet {
+.selvportraet,
+.portvin,
+.pidgeonsans,
+.keasans,
+.fressy,
+.amager,
+.rasmus {
   width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.selvportraet {
   height: 800px;
   background-image: url(assets/images/selvportraet2.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
 }
 
 .img_wrapper {
@@ -673,13 +679,10 @@ nav a {
 }
 
 .portvin {
-  width: 100%;
   height: 700px;
   background-image: url(assets/images/portvin.png);
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
-  transform-origin: center;
 }
 
 .img_wrapper2 {
@@ -689,23 +692,38 @@ nav a {
 }
 
 .pidgeonsans {
-  width: 100%;
   height: 700px;
   background-image: url(assets/images/pidgeon2.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  transform-origin: center;
+  background-size: contain;
 }
 
 .swiss_style {
-  width: 100%;
   height: 1500px;
   background-image: url(assets/images/swissstyle.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
-  transform-origin: center;
+}
+
+.fressy {
+  height: 2000px;
+  background-image: url(assets/images/fressy.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.amager {
+  height: 1500px;
+  background-image: url(assets/images/amager.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rasmus {
+  height: 1500px;
+  background-image: url(assets/images/rasmus.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .img_wrapper3 {
@@ -720,15 +738,30 @@ nav a {
   transform-origin: center;
 }
 
+.img_wrapper3_fressy {
+  overflow: hidden;
+  height: 700px;
+  transform-origin: center;
+}
+
+.img_wrapper3_amager {
+  overflow: hidden;
+  height: 600px;
+  transform-origin: center;
+}
+
+.img_wrapper3_rasmus {
+  overflow: hidden;
+  height: 400px;
+  transform-origin: center;
+}
+
 
 .keasans {
-  width: 100%;
   height: 700px;
   background-image: url(assets/images/keasans_1.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  transform-origin: center;
 }
 
 .img_wrapper4 {
@@ -862,9 +895,8 @@ nav a {
   margin-bottom: 2rem;
 }
 
-.col_wrapper2 span {
+.col_wrapper p span {
   font-size: 3rem;
-  color: #111111;
   line-height: 2.7rem;
   font-variation-settings: 'wght'500;
 }
@@ -875,8 +907,6 @@ nav a {
 
 .col_wrapper5 {
   width: 100vw;
-  display: flex;
-  align-items: flex-start;
   top: 0;
   position: relative;
   z-index: 3;

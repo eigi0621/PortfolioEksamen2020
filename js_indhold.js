@@ -218,10 +218,10 @@ function showScroll() {
 
     var speedOfImg = -.1
     var speedOfWrap = .4
-    var speedOfImg2 = -.15
-    var speedOfWrap2 = .2
-    var speedOfImg3 = 0
-    var speedOfWrap3 = .05
+    var speedOfImg2 = -.2
+    var speedOfWrap2 = .05
+    var speedOfImg3 = -.15
+    var speedOfWrap3 = .2
     var speedOfImg4 = -.2
     var speedOfWrap4 = .05
     var speedOfWrap5 = .7
@@ -233,10 +233,10 @@ function showScroll() {
 
     var imgSpeed = window.pageYOffset * speedOfImg - 100 * speedOfImg;
     var wrapSpeed = window.pageYOffset * speedOfWrap - 100 * speedOfWrap;
-    var imgSpeed2 = window.pageYOffset * speedOfImg3 - break2 * speedOfImg3;
-    var wrapSpeed2 = window.pageYOffset * speedOfWrap3 - break2 * speedOfWrap3;
-    var imgSpeed3 = window.pageYOffset * speedOfImg2 - break1 * speedOfImg2;
-    var wrapSpeed3 = window.pageYOffset * speedOfWrap2 - break1 * speedOfWrap2;
+    var imgSpeed2 = window.pageYOffset * speedOfImg2 - break1 * speedOfImg2;
+    var wrapSpeed2 = window.pageYOffset * speedOfWrap2 - break1 * speedOfWrap2;
+    var imgSpeed3 = window.pageYOffset * speedOfImg3 - break2 * speedOfImg3;
+    var wrapSpeed3 = window.pageYOffset * speedOfWrap3 - break2 * speedOfWrap3;
     var imgSpeed4 = window.pageYOffset * speedOfImg4 - break3 * speedOfImg4;
     var wrapSpeed4 = window.pageYOffset * speedOfWrap4 - break3 * speedOfWrap4;
     var wrapSpeed5 = window.pageYOffset * speedOfWrap5 - break4 * speedOfWrap5;
@@ -250,6 +250,7 @@ function showScroll() {
       document.querySelector(".col_wrapper2").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper3").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper4").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".col_wrapper5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
     }
 
     if (window.pageYOffset > 10) {
@@ -298,14 +299,11 @@ function showScroll() {
       document.querySelector(".window").classList.add("window_hide");
     }
     if (window.matchMedia("(min-width: 1000px)").matches) {
-      if (window.pageYOffset > 100) {
-        document.querySelector(".selvportraet").style.transform = "translateY(" + imgSpeed + "px)";
-        document.querySelector(".img_wrapper").style.transform = "translateY(" + wrapSpeed + "px)";
-      }
+      if (window.pageYOffset > 100) {}
 
       if (window.pageYOffset > break1) {
-        document.querySelector(".pidgeonsans").style.transform = "translateY(" + imgSpeed3 + "px)";
-        document.querySelector(".img_wrapper3").style.transform = "translateY(" + wrapSpeed3 + "px)";
+        document.querySelector(".amager").style.transform = "translateY(" + imgSpeed2 + "px)";
+        document.querySelector(".img_wrapper3_amager").style.transform = "translateY(" + wrapSpeed2 + "px)";
 
         document.querySelector(".col_wrapper2").classList.remove("lift_back");
         document.querySelector(".col_wrapper2").classList.add("lift");
@@ -315,8 +313,8 @@ function showScroll() {
       }
 
       if (window.pageYOffset > break2) {
-        document.querySelector(".portvin").style.transform = "translateY(" + imgSpeed2 + "px)";
-        document.querySelector(".img_wrapper2").style.transform = "translateY(" + wrapSpeed2 + "px)";
+        document.querySelector(".rasmus").style.transform = "translateY(" + imgSpeed3 + "px)";
+        document.querySelector(".img_wrapper3_rasmus").style.transform = "translateY(" + wrapSpeed3 + "px)";
 
         document.querySelector(".col_wrapper3").classList.remove("lift_back");
         document.querySelector(".col_wrapper3").classList.add("lift");
@@ -326,9 +324,6 @@ function showScroll() {
       }
 
       if (window.pageYOffset > break3) {
-        document.querySelector(".keasans").style.transform = "translateY(" + imgSpeed4 + "px)";
-        document.querySelector(".img_wrapper4").style.transform = "translateY(" + wrapSpeed4 + "px)";
-
         document.querySelector(".col_wrapper4").classList.remove("lift_back");
         document.querySelector(".col_wrapper4").classList.add("lift");
       } else {
