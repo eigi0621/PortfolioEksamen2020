@@ -299,13 +299,12 @@ function showScroll() {
     }
     if (window.matchMedia("(min-width: 1000px)").matches) {
       if (window.pageYOffset > 100) {
-        document.querySelector(".selvportraet").style.transform = "translateY(" + imgSpeed + "px)";
-        document.querySelector(".img_wrapper").style.transform = "translateY(" + wrapSpeed + "px)";
+
       }
 
       if (window.pageYOffset > break1) {
-        document.querySelector(".pidgeonsans").style.transform = "translateY(" + imgSpeed3 + "px)";
-        document.querySelector(".img_wrapper3").style.transform = "translateY(" + wrapSpeed3 + "px)";
+        document.querySelector(".swiss_style").style.transform = "translateY(" + imgSpeed3 + "px)";
+        document.querySelector(".img_wrapper3_swiss").style.transform = "translateY(" + wrapSpeed3 + "px)";
 
         document.querySelector(".col_wrapper2").classList.remove("lift_back");
         document.querySelector(".col_wrapper2").classList.add("lift");

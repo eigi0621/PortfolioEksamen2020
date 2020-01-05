@@ -226,12 +226,23 @@ p {
   text-align: left;
   position: relative;
   z-index: 1;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .svag {
   font-size: 2rem;
   transition: 0s;
   padding-top: 20px;
+}
+
+.column {
+  column-count: 2;
+  column-gap: 20px;
 }
 
 .logo_wrap {
@@ -687,9 +698,25 @@ nav a {
   transform-origin: center;
 }
 
+.swiss_style {
+  width: 100%;
+  height: 1500px;
+  background-image: url(assets/images/swissstyle.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  transform-origin: center;
+}
+
 .img_wrapper3 {
   overflow: hidden;
   height: 400px;
+  transform-origin: center;
+}
+
+.img_wrapper3_swiss {
+  overflow: hidden;
+  height: 500px;
   transform-origin: center;
 }
 
@@ -708,6 +735,73 @@ nav a {
   overflow: hidden;
   height: 300px;
   transform-origin: center;
+}
+
+.button_wrap {
+  margin: 20px 10px 0 0;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_text {
+  margin: 15px 0 10px 0;
+  transform: translateX(0);
+}
+
+.button_wrap:hover .button_text {
+  transform: translateX(-25px);
+}
+
+.arrow1 {
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  transform: translateX(90px) translateY(0) rotate(0);
+}
+
+.arrow2 {
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  transform: translateX(90px) translateY(0) rotate(0);
+  transform-origin: right;
+}
+
+.arrow3 {
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  transform: translateX(90px) translateY(0) rotate(0);
+  transform-origin: right;
+}
+
+.button_wrap:hover .arrow1 {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  transform: translateX(90px) translateY(0) rotate(0);
+}
+
+.button_wrap:hover .arrow2 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  transform: translateX(105px) translateY(.5px) rotate(45deg);
+}
+
+.button_wrap:hover .arrow3 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  transform: translateX(105px) translateY(-.5px) rotate(-45deg);
 }
 
 .col_wrapper {
