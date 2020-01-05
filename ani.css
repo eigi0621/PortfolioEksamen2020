@@ -513,11 +513,11 @@
 
 @keyframes right_push2-kf {
   0% {
-    right: -70px;
+    transform: translateX(100px) translateY(0px);
   }
 
   100% {
-    right: 0;
+    transform: translateX(0px) translateY(0px);
   }
 }
 

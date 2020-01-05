@@ -242,11 +242,13 @@ function showScroll() {
 
     var colWrapperPadding = (window.innerWidth - 1000) / 2;
 
-    if (window.matchMedia("(min-width: 1000px)").matches) {
+    if (window.matchMedia("(min-width: 800px)").matches) {
       document.querySelector(".col_wrapper1").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper2").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper3").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
       document.querySelector(".col_wrapper5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+    } else {
+      document.querySelector(".col_wrapper5").style.padding = "50px 10px 10px 10px";
     }
 
     if (window.pageYOffset > 10) {
@@ -290,7 +292,7 @@ function showScroll() {
       document.querySelector(".window").classList.remove("window_show");
       document.querySelector(".window").classList.add("window_hide");
     }
-    if (window.matchMedia("(min-width: 1000px)").matches) {
+    if (window.matchMedia("(min-width: 800px)").matches) {
       if (window.pageYOffset > 100) {}
 
       if (window.pageYOffset > break1) {
