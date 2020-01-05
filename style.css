@@ -46,7 +46,7 @@ h2::selection,
 h3::selection,
 p::selection,
 span::selection {
-  color: #07DD5E;
+  color: #111111;
   background-color: #FFFFFF;
 }
 
@@ -430,17 +430,17 @@ nav a {
 }
 
 .burger_div:hover .burger1 {
-  transform: translateX(8px) translateY(-3px) rotate(45deg);
+  transform: translateX(13px) translateY(-3px) rotate(45deg);
   width: 15px;
 }
 
 .burger_div:hover .burger2 {
-  transform: translateX(-10px) translateY(0px) rotate(0);
+  transform: translateX(-5px) translateY(0px) rotate(0);
   width: 30px;
 }
 
 .burger_div:hover .burger3 {
-  transform: translateX(8px) translateY(3px) rotate(-45deg);
+  transform: translateX(13px) translateY(3px) rotate(-45deg);
   width: 15px;
 }
 
@@ -455,7 +455,7 @@ nav a {
 }
 
 .burger_div:hover .menu_title {
-  transform: translateX(-4px) translateY(-2px) rotate(-90deg);
+  transform: translateX(-2px) translateY(-2px) rotate(-90deg);
 }
 
 .burger_div:hover .bg_wrapper_right2 {
@@ -726,6 +726,20 @@ nav a {
   background-size: contain;
 }
 
+.glade {
+  height: 1500px;
+  background-image: url(assets/images/glade.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.deling {
+  height: 1500px;
+  background-image: url(assets/images/deling.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .img_wrapper3 {
   overflow: hidden;
   height: 400px;
@@ -756,6 +770,18 @@ nav a {
   transform-origin: center;
 }
 
+.img_wrapper3_glade {
+  overflow: hidden;
+  height: 400px;
+  transform-origin: center;
+}
+
+.img_wrapper3_deling {
+  overflow: hidden;
+  height: 400px;
+  transform-origin: center;
+}
+
 
 .keasans {
   height: 700px;
@@ -778,12 +804,30 @@ nav a {
   align-items: center;
 }
 
+.button_wrap_doku {
+  margin: 10px 10px 0 0;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+}
+
+.button_wrap_doku .svag {
+  padding-top: 0;
+  font-size: 1.5rem;
+}
+
 .button_text {
   margin: 15px 0 10px 0;
   transform: translateX(0);
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
 }
 
-.button_wrap:hover .button_text {
+.button_wrap:hover .button_text,
+.button_wrap_doku:hover .button_text {
   transform: translateX(-25px);
 }
 
@@ -816,21 +860,24 @@ nav a {
   transform-origin: right;
 }
 
-.button_wrap:hover .arrow1 {
+.button_wrap:hover .arrow1,
+.button_wrap_doku:hover .arrow1 {
   position: absolute;
   width: 40px;
   height: 3px;
   transform: translateX(90px) translateY(0) rotate(0);
 }
 
-.button_wrap:hover .arrow2 {
+.button_wrap:hover .arrow2,
+.button_wrap_doku:hover .arrow2 {
   position: absolute;
   width: 15px;
   height: 3px;
   transform: translateX(105px) translateY(.5px) rotate(45deg);
 }
 
-.button_wrap:hover .arrow3 {
+.button_wrap:hover .arrow3,
+.button_wrap_doku:hover .arrow3 {
   position: absolute;
   width: 15px;
   height: 3px;

@@ -220,7 +220,7 @@ function showScroll() {
     var speedOfWrap = .4
     var speedOfImg2 = -.2
     var speedOfWrap2 = .05
-    var speedOfImg3 = -.15
+    var speedOfImg3 = -.1
     var speedOfWrap3 = .2
     var speedOfImg4 = -.2
     var speedOfWrap4 = .05
@@ -261,12 +261,10 @@ function showScroll() {
 
       setTimeout(function () {
         document.querySelector(".indhold-text_wrapper1").classList.remove("indhold-center_ani1");
-
         document.querySelector(".indhold-text_wrapper1").classList.add("indhold-center_ani1_back");
       }, 150);
       setTimeout(function () {
         document.querySelector(".indhold-text_wrapper2").classList.remove("indhold-center_ani2");
-
         document.querySelector(".indhold-text_wrapper2").classList.add("indhold-center_ani2_back");
       }, 200);
 
@@ -281,18 +279,16 @@ function showScroll() {
       document.querySelector(".bg_front_left").classList.remove("intro_push_back");
       document.querySelector(".bg_front_left").classList.add("intro_push");
 
+        document.querySelector(".scroll_wrap").classList.remove("push_scroll");
+        document.querySelector(".scroll_wrap").classList.add("push_scroll_back");
+
       setTimeout(function () {
         document.querySelector(".indhold-text_wrapper1").classList.remove("indhold-center_ani1_back");
-
         document.querySelector(".indhold-text_wrapper1").classList.add("indhold-center_ani1");
       }, 150);
       setTimeout(function () {
         document.querySelector(".indhold-text_wrapper2").classList.remove("indhold-center_ani2_back");
-
         document.querySelector(".indhold-text_wrapper2").classList.add("indhold-center_ani2");
-
-        document.querySelector(".scroll_wrap").classList.remove("push_scroll");
-        document.querySelector(".scroll_wrap").classList.add("push_scroll_back");
       }, 200);
 
       document.querySelector(".window").classList.remove("window_show");
