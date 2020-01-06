@@ -125,12 +125,12 @@ h1 {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 700;
   font-variation-settings: 'wght'800;
   letter-spacing: 1px;
   text-align: left;
-  line-height: 6rem;
+  line-height: 4rem;
   padding-top: 20px;
 }
 
@@ -160,23 +160,23 @@ h1:hover {
 .web-text_wrapper1 h1,
 .ux-text_wrapper1 h1,
 .indhold-text_wrapper1 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-variation-settings: 'wght'300;
   letter-spacing: 0px;
-  line-height: 5rem;
+  line-height: 3rem;
 }
 
 .web-text_wrapper1 h1:hover,
 .ux-text_wrapper1 h1:hover,
 .indhold-text_wrapper1 h1:hover {
-  font-variation-settings: 'wght'800;
+  font-variation-settings: 'wght'500;
 }
 
 h2 {
   font-family: PidgeonSans;
   transition: 0s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   font-variation-settings: 'wght'600;
   letter-spacing: 0px;
@@ -184,14 +184,14 @@ h2 {
   position: relative;
   z-index: 1;
   margin-bottom: 0rem;
-  line-height: 6rem;
+  line-height: 3.5rem;
 }
 
 h3 {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 700;
   font-variation-settings: 'wght'400;
   letter-spacing: 0px;
@@ -199,14 +199,14 @@ h3 {
   position: relative;
   z-index: 1;
   margin-bottom: 0rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
 p {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   font-variation-settings: 'wght'200;
   letter-spacing: 0px;
@@ -223,7 +223,7 @@ a {
 }
 
 .svag {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   transition: 0s;
   padding-top: 10px;
 }
@@ -237,13 +237,20 @@ a {
   position: fixed;
   z-index: 10;
   visibility: hidden;
-  transform: translateX(30px) translateY(7px);
-  top: -30px;
+  transform: translateX(100px) translateY(20px);
 }
 
 .logo_wrap p {
   visibility: visible;
   font-size: 1rem;
+}
+
+.no_trans {
+  transition: 0s;
+}
+
+.no_trans:hover {
+  font-variation-settings: 'wght'600;
 }
 
 .green_outro {
@@ -294,6 +301,21 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 nav {
   height: 380px;
   position: fixed;
@@ -311,6 +333,7 @@ nav a {
   text-decoration: none;
   color: #111111;
   transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
   flex-basis: 100rem;
 }
 
@@ -432,15 +455,15 @@ nav a {
 }
 
 .burger1_cross_on {
-  transform: translateX(1px) translateY(2px) rotate(45deg);
+  transform: translateX(5px) translateY(2px) rotate(45deg);
 }
 
 .burger2_cross_on {
-  transform: translateX(1px) translateY(0px) rotate(45deg);
+  transform: translateX(5px) translateY(0px) rotate(45deg);
 }
 
 .burger3_cross_on {
-  transform: translateX(1px) translateY(-2px) rotate(-45deg);
+  transform: translateX(5px) translateY(-2px) rotate(-45deg);
 }
 
 .burger1_cross_off {
@@ -464,7 +487,7 @@ nav a {
 
 .scroll_pos {
   width: 100vw;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   position: fixed;
   top: 0;
   left: 0;
@@ -569,7 +592,7 @@ nav a {
 
 .bg_front_left {
   height: 2000px;
-  width: 100vw;
+  width: 50vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -586,6 +609,10 @@ nav a {
   right: 0;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+}
+
+.bg_front_right2 {
+  width: 25vw;
 }
 
 
@@ -665,14 +692,14 @@ nav a {
 }
 
 .swiss_style {
-  height: 1500px;
+  height: 2000px;
   background-image: url(assets/images/swissstyle.jpg);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .fressy {
-  height: 2000px;
+  height: 3000px;
   background-image: url(assets/images/fressy.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -714,37 +741,37 @@ nav a {
 
 .img_wrapper3_swiss {
   overflow: hidden;
-  height: 500px;
+  height: 200vw;
   transform-origin: center;
 }
 
 .img_wrapper3_fressy {
   overflow: hidden;
-  height: 700px;
+  height: 370vw;
   transform-origin: center;
 }
 
 .img_wrapper3_amager {
   overflow: hidden;
-  height: 600px;
+  height: 180vw;
   transform-origin: center;
 }
 
 .img_wrapper3_rasmus {
   overflow: hidden;
-  height: 400px;
+  height: 110vw;
   transform-origin: center;
 }
 
 .img_wrapper3_glade {
   overflow: hidden;
-  height: 400px;
+  height: 60vw;
   transform-origin: center;
 }
 
 .img_wrapper3_deling {
   overflow: hidden;
-  height: 400px;
+  height: 60vw;
   transform-origin: center;
 }
 
@@ -764,7 +791,7 @@ nav a {
 
 .button_wrap {
   margin: 20px 10px 0 0;
-  width: 18rem;
+  width: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -772,7 +799,7 @@ nav a {
 
 .button_wrap_doku {
   margin: 10px 10px 0 0;
-  width: 18rem;
+  width: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -792,9 +819,8 @@ nav a {
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
 }
 
-.button_wrap:hover .button_text,
-.button_wrap_doku:hover .button_text {
-  transform: translateX(-25px);
+.button_wrap:nth-child(2) {
+  position: absolute;
 }
 
 .arrow1 {
@@ -826,30 +852,6 @@ nav a {
   transform-origin: right;
 }
 
-.button_wrap:hover .arrow1,
-.button_wrap_doku:hover .arrow1 {
-  position: absolute;
-  width: 40px;
-  height: 3px;
-  transform: translateX(90px) translateY(0) rotate(0);
-}
-
-.button_wrap:hover .arrow2,
-.button_wrap_doku:hover .arrow2 {
-  position: absolute;
-  width: 15px;
-  height: 3px;
-  transform: translateX(105px) translateY(.5px) rotate(45deg);
-}
-
-.button_wrap:hover .arrow3,
-.button_wrap_doku:hover .arrow3 {
-  position: absolute;
-  width: 15px;
-  height: 3px;
-  transform: translateX(105px) translateY(-.5px) rotate(-45deg);
-}
-
 .col_wrapper {
   width: 100vw;
   display: flex;
@@ -872,7 +874,7 @@ nav a {
 
 .col {
   width: 100%;
-  flex-basis: 400px;
+  flex-basis: 370px;
   flex-grow: 1;
   top: 0;
 }
@@ -883,10 +885,6 @@ nav a {
   flex-wrap: wrap;
   flex-direction: column;
 }
-
-.col_right h3,
-.col_right p,
-.col_right div {}
 
 .line {
   width: 3px;
@@ -909,7 +907,7 @@ nav a {
 }
 
 .col_wrapper p span {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-variation-settings: 'wght'500;
 }
 
@@ -932,6 +930,10 @@ nav a {
   visibility: hidden;
 }
 
+.logo_wrap p {
+  visibility: hidden;
+}
+
 
 @media only screen and (min-width: 800px) {
   h1 {
@@ -942,15 +944,31 @@ nav a {
   h2 {
     font-size: 7.5rem;
     line-height: 8rem;
+    transition: .4s;
+    transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  }
+
+  h2:hover {
+    font-variation-settings: 'wght'300;
   }
 
   h3 {
     font-size: 5rem;
     line-height: 6rem;
+    transition: .4s;
+    transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  }
+
+  h3:hover {
+    font-variation-settings: 'wght'200;
   }
 
   p {
     font-size: 2.5rem;
+  }
+
+  .svag {
+    font-size: 1.7rem;
   }
 
   .col_wrapper p span {
@@ -987,7 +1005,7 @@ nav a {
   }
 
   .bg_wrapper_right2 {
-    right: -223px;
+    right: -226px;
   }
 
   .column {
@@ -1020,5 +1038,82 @@ nav a {
 
   .img_wrapper4 {
     height: 200px;
+  }
+
+  .img_wrapper3_amager {
+    height: 600px;
+  }
+
+  .img_wrapper3_rasmus {
+    height: 400px;
+  }
+
+  .fressy {
+    height: 2500px;
+  }
+
+  .img_wrapper3_fressy {
+    height: 800px;
+  }
+
+  .img_wrapper3_swiss {
+    height: 500px;
+  }
+
+  .glade {
+    height: 2500px;
+  }
+
+  .deling {
+    height: 2500px;
+  }
+
+  .web_space {
+    height: 100px;
+  }
+
+  .button_wrap,
+  .button_wrap_doku {
+    width: 18rem;
+  }
+
+  .button_wrap:hover .arrow1,
+  .button_wrap_doku:hover .arrow1 {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    transform: translateX(90px) translateY(0) rotate(0);
+  }
+
+  .button_wrap:hover .arrow2,
+  .button_wrap_doku:hover .arrow2 {
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    transform: translateX(105px) translateY(.5px) rotate(45deg);
+  }
+
+  .button_wrap:hover .arrow3,
+  .button_wrap_doku:hover .arrow3 {
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    transform: translateX(105px) translateY(-.5px) rotate(-45deg);
+  }
+
+  .button_wrap:hover .button_text,
+  .button_wrap_doku:hover .button_text {
+    transform: translateX(-25px);
+  }
+
+  .web-text_wrapper1 h1,
+  .ux-text_wrapper1 h1,
+  .indhold-text_wrapper1 h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .logo_wrap p {
+    visibility: visible;
   }
 }

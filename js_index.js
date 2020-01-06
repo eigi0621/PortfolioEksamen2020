@@ -31,20 +31,19 @@ function loadedState() {
   }, 200);
 
   setTimeout(function () {
-    document.querySelector(".bg_wrapper_right2").classList.add("right_push");
     document.querySelector(".burger_wrap").classList.add("right_push2");
-    document.querySelector(".logo_wrap").classList.add("top_push");
-    document.querySelector(".logo_wrap").style.transform = "translateX(30px) translateY(307px)"
+    document.querySelector(".logo_wrap").classList.add("top_push_menu");
+    document.querySelector(".logo_wrap").style.transform = "translateX(30px) translateY(237px)"
     document.querySelector(".bg_front_left").classList.add("intro_push");
   }, 200);
 
   setTimeout(function () {
-    document.querySelector(".index-text_wrapper1").classList.add("index-center_ani1");
+    document.querySelector(".index-text_wrapper1").classList.add("center_ani1");
   }, 350);
 
   setTimeout(function () {
     document.querySelector(".center_h1").style.visibility = "visible";
-    document.querySelector(".index-text_wrapper2").classList.add("index-center_ani2");
+    document.querySelector(".index-text_wrapper2").classList.add("center_ani1");
 
     document.body.style.overflow = "visible";
     showScroll();
@@ -85,6 +84,7 @@ function greenOutro() {
 
 }
 
+document.querySelector(".button_html").addEventListener("click", redOutro);
 document.querySelector(".nav1").addEventListener("click", redOutro);
 
 function redOutro() {
@@ -96,6 +96,7 @@ function redOutro() {
 
 }
 
+document.querySelector(".button_ux").addEventListener("click", blueOutro);
 document.querySelector(".nav2").addEventListener("click", blueOutro);
 
 function blueOutro() {
@@ -107,9 +108,12 @@ function blueOutro() {
 
 }
 
+document.querySelector(".button_animation").addEventListener("click", purpleOutro);
 document.querySelector(".nav3").addEventListener("click", purpleOutro);
 
 function purpleOutro() {
+  console.log("tester")
+
   document.querySelector(".purple_outro").classList.add("purple_outro_ani");
 
   setTimeout(function () {
@@ -118,6 +122,7 @@ function purpleOutro() {
 
 }
 
+document.querySelector(".button_indhold").addEventListener("click", yellowOutro);
 document.querySelector(".nav4").addEventListener("click", yellowOutro);
 
 function yellowOutro() {
@@ -142,7 +147,6 @@ function menuShow() {
   document.querySelector(".bg_wrapper_right").classList.remove("menu_push_right");
   document.querySelector(".nav").classList.remove("menu_push_right");
   document.querySelector(".bg_wrapper_right").classList.remove("right_push");
-  document.querySelector(".bg_wrapper_right2").classList.remove("right_push");
   document.querySelector(".burger_wrap").classList.remove("right_push2");
   document.querySelector(".burger_wrap").style.right = "0px";
   document.querySelector(".bg_wrapper_right").style.right = "-300px";
@@ -167,6 +171,8 @@ function menuShow() {
   document.querySelector(".bg_wrapper_top").classList.add("top_push_menu");
   document.querySelector(".bg_wrapper_bottom").classList.add("bottom_push_menu");
   document.querySelector(".bg_wrapper_left").classList.add("left_push_menu");
+  document.querySelector(".logo_wrap").classList.remove("top_push_menu");
+  document.querySelector(".logo_wrap").classList.add("top_push_menu_back");
 
   document.querySelector(".green_overlay").classList.remove("green_overlay_off");
   document.querySelector(".green_overlay").classList.add("green_overlay_on");
@@ -203,6 +209,9 @@ function menuHide() {
   document.querySelector(".bg_wrapper_top").classList.add("top_push_menu_back");
   document.querySelector(".bg_wrapper_bottom").classList.add("bottom_push_menu_back");
   document.querySelector(".bg_wrapper_left").classList.add("left_push_menu_back");
+
+  document.querySelector(".logo_wrap").classList.remove("top_push_menu_back");
+  document.querySelector(".logo_wrap").classList.add("top_push_menu");
 
   document.querySelector(".green_overlay").classList.remove("green_overlay_on");
   document.querySelector(".green_overlay").classList.add("green_overlay_off");
@@ -246,7 +255,6 @@ function showScroll() {
     var slowText3 = window.pageYOffset * slowSpeedNum - break3 * slowSpeedNum;
 
 
-
     var colWrapperPadding = (window.innerWidth - 1000) / 2;
 
     if (window.matchMedia("(min-width: 800px)").matches) {
@@ -266,12 +274,12 @@ function showScroll() {
       document.querySelector(".bg_front_left").classList.add("intro_push_back");
 
       setTimeout(function () {
-        document.querySelector(".index-text_wrapper1").classList.remove("index-center_ani1");
-        document.querySelector(".index-text_wrapper1").classList.add("index-center_ani1_back");
+        document.querySelector(".index-text_wrapper1").classList.remove("center_ani1");
+        document.querySelector(".index-text_wrapper1").classList.add("center_ani1_back");
       }, 150);
       setTimeout(function () {
-        document.querySelector(".index-text_wrapper2").classList.remove("index-center_ani2");
-        document.querySelector(".index-text_wrapper2").classList.add("index-center_ani2_back");
+        document.querySelector(".index-text_wrapper2").classList.remove("center_ani1");
+        document.querySelector(".index-text_wrapper2").classList.add("center_ani1_back");
       }, 200);
 
 
@@ -289,12 +297,12 @@ function showScroll() {
       document.querySelector(".scroll_wrap").classList.add("push_scroll_back");
 
       setTimeout(function () {
-        document.querySelector(".index-text_wrapper1").classList.remove("index-center_ani1_back");
-        document.querySelector(".index-text_wrapper1").classList.add("index-center_ani1");
+        document.querySelector(".index-text_wrapper1").classList.remove("center_ani1_back");
+        document.querySelector(".index-text_wrapper1").classList.add("center_ani1");
       }, 150);
       setTimeout(function () {
-        document.querySelector(".index-text_wrapper2").classList.remove("index-center_ani2_back");
-        document.querySelector(".index-text_wrapper2").classList.add("index-center_ani2");
+        document.querySelector(".index-text_wrapper2").classList.remove("center_ani1_back");
+        document.querySelector(".index-text_wrapper2").classList.add("center_ani1");
       }, 200);
 
       document.querySelector(".window").classList.remove("window_show");
@@ -303,9 +311,8 @@ function showScroll() {
     if (window.matchMedia("(min-width: 800px)").matches) {
       if (window.pageYOffset > 100) {
         document.querySelector(".selvportraet").style.transform = "translateY(" + imgSpeed + "px)";
-        document.querySelector(".img_wrapper").style.transform = "translateY(" + wrapSpeed + "px)";
         document.querySelector(".slow_header1").style.transform = "translateY(" + wrapSpeed + "px)";
-        document.querySelector(".svag").style.transform = "translateY(" + wrapSpeed + "px)";
+        document.querySelector(".col_slow").style.transform = "translateY(" + wrapSpeed + "px)";
       }
 
       if (window.pageYOffset > break1) {
