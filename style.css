@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
 }
 
 .space4 {
-  height: 200px;
+  height: 150px;
 }
 
 /*FARVER-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -500,7 +500,7 @@ nav a {
 
 .bg_front_left {
   height: 2000px;
-  width: 50vw;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -753,7 +753,7 @@ nav a {
 
 .col {
   width: 100%;
-  flex-basis: 370px;
+  flex-basis: 495px;
   flex-grow: 1;
   top: 0;
 }
@@ -799,7 +799,6 @@ nav a {
   top: 0;
   position: relative;
   z-index: 3;
-  margin-top: 0px;
 }
 
 .bg_wrapper_top,
@@ -827,7 +826,7 @@ nav a {
 }
 
 .logo_wrap p {
-  visibility: visible;
+  visibility: hidden;
   font-size: 1rem;
 }
 
@@ -1004,7 +1003,11 @@ nav a {
   }
 
   .web_space {
-    height: 100px;
+    height: 0px;
+  }
+
+  .space4 {
+    height: 200px;
   }
 
   .button_wrap,

@@ -490,12 +490,12 @@
 }
 
 .lift {
-  animation: lift-kf .5s cubic-bezier(.3, 0, .2, 1) both;
+  animation: lift-kf .7s cubic-bezier(.3, 0, .2, 1) both;
 }
 
 @keyframes lift-kf {
   0% {
-    transform: translateY(201px) skewY(5deg);
+    transform: translateY(101px) skewY(5deg);
   }
 
   100% {
@@ -513,7 +513,7 @@
   }
 
   100% {
-    transform: translateY(201px) skewY(5deg);
+    transform: translateY(101px) skewY(5deg);
   }
 }
 
@@ -527,7 +527,7 @@
   }
 
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-201px);
   }
 }
 
@@ -537,7 +537,7 @@
 
 @keyframes footer_lift_back-kf {
   0% {
-    transform: translateY(-200px);
+    transform: translateY(-201px);
   }
 
   100% {

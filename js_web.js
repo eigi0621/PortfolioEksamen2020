@@ -1,6 +1,7 @@
 document.body.style.overflow = "hidden";
 
 window.addEventListener("load", loadedState);
+window.scrollTo(0, 0);
 
 function loadedState() {
   window.scrollTo(0, 0);
@@ -25,6 +26,7 @@ function loadedState() {
     document.querySelector(".logo_wrap").classList.add("top_push_menu");
     document.querySelector(".logo_wrap").style.transform = "translateX(30px) translateY(237px)"
     document.querySelector(".bg_front_left").classList.add("sub_intro_push");
+    document.querySelector(".bg_front_right").classList.add("sub_intro_push");
   }, 200);
 
   setTimeout(function () {
@@ -187,28 +189,34 @@ function showScroll() {
     // log the length scrolled vertically
     console.log(window.pageYOffset);
 
-    var speedOfImg2 = -.5
-    var speedOfWrap2 = .05
-    var speedOfWrap5 = .7
+    if (window.matchMedia("(min-width: 1060px)").matches) {
+      var speedOfImg1 = -.5
+      var speedOfWrap1 = .05
+      var speedOfWrap5 = .7
+    } else {
+      var speedOfImg1 = 0
+      var speedOfWrap1 = 0
+      var speedOfWrap5 = 0
+    }
 
     var break1 = document.querySelector(".section_class2").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
     var break2 = document.querySelector(".section_class5").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
 
-    var imgSpeed3 = window.pageYOffset * speedOfImg2 - break1 * speedOfImg2 + 100;
-    var wrapSpeed3 = window.pageYOffset * speedOfWrap2 - break1 * speedOfWrap2;
+    var imgSpeed3 = window.pageYOffset * speedOfImg1 - break1 * speedOfImg1 + 100;
+    var wrapSpeed3 = window.pageYOffset * speedOfWrap1 - break1 * speedOfWrap1;
     var wrapSpeed5 = window.pageYOffset * speedOfWrap5 - break2 * speedOfWrap5;
 
     var colWrapperPadding = (window.innerWidth - 1000) / 2;
 
-    if (window.matchMedia("(min-width: 800px)").matches) {
-      document.querySelector(".section_class1").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
-      document.querySelector(".section_class2").style.padding = "100px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+    if (window.matchMedia("(min-width: 1060px)").matches) {
+      document.querySelector(".section_class1").style.padding = "100px " + colWrapperPadding + "px";
+      document.querySelector(".section_class2").style.padding = "100px " + colWrapperPadding + "px";
       document.querySelector(".section_class5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
     } else {
       document.querySelector(".section_class5").style.padding = "50px 10px 10px 10px";
     }
 
-    if (window.pageYOffset > 10) {
+    if (window.pageYOffset > 1) {
       document.querySelector(".bg_front_left").classList.remove("sub_intro_push");
       document.querySelector(".bg_front_left").classList.add("sub_intro_push_back");
       document.querySelector(".bg_front_right").classList.remove("sub_intro_push");
@@ -249,22 +257,25 @@ function showScroll() {
         document.querySelector(".scroll_wrap").classList.add("push_scroll_back");
       }, 200);
     }
-    if (window.matchMedia("(min-width: 800px)").matches) {
-      if (window.pageYOffset > break1) {
-        document.querySelector(".swiss_style").style.transform = "translateY(" + imgSpeed3 + "px)";
-        document.querySelector(".img_wrapper3_swiss").style.transform = "translateY(" + wrapSpeed3 + "px)";
 
-        document.querySelector(".section_class2").classList.remove("lift_back");
-        document.querySelector(".section_class2").classList.add("lift");
-      } else {
-        document.querySelector(".section_class2").classList.remove("lift");
-        document.querySelector(".section_class2").classList.add("lift_back");
-      }
+    if (window.pageYOffset > break1) {
+      document.querySelector(".swiss_style").style.transform = "translateY(" + imgSpeed3 + "px)";
+      document.querySelector(".img_wrapper3_swiss").style.transform = "translateY(" + wrapSpeed3 + "px)";
 
-      if (window.pageYOffset > break2) {
-        console.log(break2);
-        document.querySelector(".last_wrap").style.transform = "translateY(" + wrapSpeed5 + "px)";
-      }
+      document.querySelector(".section_class2").classList.remove("lift_back");
+      document.querySelector(".section_class2").classList.add("lift");
+    } else {
+      document.querySelector(".section_class2").classList.remove("lift");
+      document.querySelector(".section_class2").classList.add("lift_back");
+    }
+
+    if (window.pageYOffset > break2) {
+      document.querySelector(".section_class5").classList.remove("lift_back");
+      document.querySelector(".section_class5").classList.add("lift");
+    } else {
+      document.querySelector(".section_class5").classList.remove("lift");
+      document.querySelector(".section_class5").classList.add("lift_back");
+
     }
   }
 }

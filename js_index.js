@@ -3,12 +3,13 @@ document.body.style.overflow = "hidden";
 
 //lyt til hvornår vinduet er loaded
 window.addEventListener("load", loadedState);
+window.scrollTo(0, 0);
 
 function loadedState() {
-  //scroll til toppen
-  window.scrollTo(0, 0);
 
   setTimeout(function () {
+    //scroll til toppen
+    window.scrollTo(0, 0);
     document.querySelector(".scroll_wrap").classList.add("push_scroll");
     document.querySelector(".green_intro").classList.add("green_intro_off");
     document.querySelector(".main_h1_1").classList.add("center_ani_before");
@@ -40,6 +41,7 @@ function loadedState() {
 
     document.body.style.overflow = "visible";
     showScroll();
+
     document.querySelector(".scroll_wrap").classList.remove("push_scroll");
     document.querySelector(".scroll_wrap").classList.add("push_scroll_back");
     document.querySelector(".scroll_wrap").style.visibility = "visible";
@@ -194,16 +196,29 @@ function showScroll() {
   window.onscroll = function (e) {
     console.log(window.pageYOffset);
 
-    //definér scroll-hastigheder (1 er statisk, -1 er dobbelt hastighed)
-    var speedOfImg = -.1
-    var speedOfWrap = .4
-    var speedOfImg2 = 0
-    var speedOfWrap2 = .15
-    var speedOfImg3 = 0
-    var speedOfWrap3 = .05
-    var speedOfImg4 = -.2
-    var speedOfWrap4 = .05
-    var speedOfWrap5 = .7
+    //hvis vindet er større end 1060px
+    if (window.matchMedia("(min-width: 1060px)").matches) {
+      //definér scroll-hastigheder (1 er fixed, 0 er normal, -1 er dobbelt hastighed) - hvis ikke, normal
+      var speedOfImg = -.1
+      var speedOfWrap = .4
+      var speedOfImg2 = 0
+      var speedOfWrap2 = .15
+      var speedOfImg3 = 0
+      var speedOfWrap3 = .05
+      var speedOfImg4 = -.2
+      var speedOfWrap4 = .05
+      var speedOfWrap5 = .7
+    } else {
+      var speedOfImg = 0
+      var speedOfWrap = 0
+      var speedOfImg2 = 0
+      var speedOfWrap2 = 0
+      var speedOfImg3 = 0
+      var speedOfWrap3 = 0
+      var speedOfImg4 = 0
+      var speedOfWrap4 = 0
+      var speedOfWrap5 = 0
+    }
 
     //definér hvor nye sektioner starter
     var break1 = document.querySelector(".section_class2").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
@@ -231,14 +246,14 @@ function showScroll() {
       document.querySelector(".section_class2").style.padding = "100px " + colWrapperPadding + "px";
       document.querySelector(".section_class3").style.padding = "100px " + colWrapperPadding + "px";
       document.querySelector(".section_class4").style.padding = "100px " + colWrapperPadding + "px";
-      document.querySelector(".section_class5").style.padding = "200px " + colWrapperPadding + "px";
+      document.querySelector(".section_class5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
     } else {
       //ellers sæt footerens padding til dette
       document.querySelector(".section_class5").style.padding = "50px 10px 10px 10px";
     }
 
-    //hvis man scroller mere end 10px ned gør dette
-    if (window.pageYOffset > 10) {
+    //hvis man scroller mere end 1px ned gør dette
+    if (window.pageYOffset > 1) {
       document.querySelector(".bg_front_left").classList.remove("intro_push");
       document.querySelector(".bg_front_left").classList.add("intro_push_back");
 
@@ -277,56 +292,57 @@ function showScroll() {
       }, 200);
     }
 
-    //hvis vindet er større end 1060px
-    if (window.matchMedia("(min-width: 1060px)").matches) {
+    //hvis man når 100px ned gør dette
+    if (window.pageYOffset > 100) {
+      document.querySelector(".selvportraet").style.transform = "translateY(" + imgSpeed + "px)";
+      document.querySelector(".slow_header1").style.transform = "translateY(" + wrapSpeed + "px)";
+      document.querySelector(".col_slow").style.transform = "translateY(" + wrapSpeed + "px)";
+    }
 
-      //hvis man når 100px ned gør dette
-      if (window.pageYOffset > 100) {
-        document.querySelector(".selvportraet").style.transform = "translateY(" + imgSpeed + "px)";
-        document.querySelector(".slow_header1").style.transform = "translateY(" + wrapSpeed + "px)";
-        document.querySelector(".col_slow").style.transform = "translateY(" + wrapSpeed + "px)";
-      }
+    //hvis man når til break1 ned gør dette
+    if (window.pageYOffset > break1) {
+      document.querySelector(".pidgeonsans").style.transform = "translateY(" + imgSpeed2 + "px)";
+      document.querySelector(".img_wrapper3").style.transform = "translateY(" + wrapSpeed2 + "px)";
 
-      //hvis man når til break1 ned gør dette
-      if (window.pageYOffset > break1) {
-        document.querySelector(".pidgeonsans").style.transform = "translateY(" + imgSpeed2 + "px)";
-        document.querySelector(".img_wrapper3").style.transform = "translateY(" + wrapSpeed2 + "px)";
+      document.querySelector(".section_class2").classList.remove("lift_back");
+      document.querySelector(".section_class2").classList.add("lift");
+    } else {
+      document.querySelector(".section_class2").classList.remove("lift");
+      document.querySelector(".section_class2").classList.add("lift_back");
+    }
 
-        document.querySelector(".section_class2").classList.remove("lift_back");
-        document.querySelector(".section_class2").classList.add("lift");
-      } else {
-        document.querySelector(".section_class2").classList.remove("lift");
-        document.querySelector(".section_class2").classList.add("lift_back");
-      }
+    //hvis man når til break2 ned gør dette
+    if (window.pageYOffset > break2) {
+      document.querySelector(".portvin").style.transform = "translateY(" + imgSpeed3 + "px)";
+      document.querySelector(".img_wrapper2").style.transform = "translateY(" + wrapSpeed3 + "px)";
 
-      //hvis man når til break2 ned gør dette
-      if (window.pageYOffset > break2) {
-        document.querySelector(".portvin").style.transform = "translateY(" + imgSpeed3 + "px)";
-        document.querySelector(".img_wrapper2").style.transform = "translateY(" + wrapSpeed3 + "px)";
+      document.querySelector(".section_class3").classList.remove("lift_back");
+      document.querySelector(".section_class3").classList.add("lift");
+    } else {
+      document.querySelector(".section_class3").classList.remove("lift");
+      document.querySelector(".section_class3").classList.add("lift_back");
+    }
 
-        document.querySelector(".section_class3").classList.remove("lift_back");
-        document.querySelector(".section_class3").classList.add("lift");
-      } else {
-        document.querySelector(".section_class3").classList.remove("lift");
-        document.querySelector(".section_class3").classList.add("lift_back");
-      }
+    //hvis man når til break3 ned gør dette
+    if (window.pageYOffset > break3) {
+      document.querySelector(".keasans").style.transform = "translateY(" + imgSpeed4 + "px)";
+      document.querySelector(".img_wrapper4").style.transform = "translateY(" + wrapSpeed4 + "px)";
 
-      //hvis man når til break3 ned gør dette
-      if (window.pageYOffset > break3) {
-        document.querySelector(".keasans").style.transform = "translateY(" + imgSpeed4 + "px)";
-        document.querySelector(".img_wrapper4").style.transform = "translateY(" + wrapSpeed4 + "px)";
+      document.querySelector(".section_class4").classList.remove("lift_back");
+      document.querySelector(".section_class4").classList.add("lift");
+    } else {
+      document.querySelector(".section_class4").classList.remove("lift");
+      document.querySelector(".section_class4").classList.add("lift_back");
+    }
 
-        document.querySelector(".section_class4").classList.remove("lift_back");
-        document.querySelector(".section_class4").classList.add("lift");
-      } else {
-        document.querySelector(".section_class4").classList.remove("lift");
-        document.querySelector(".section_class4").classList.add("lift_back");
-      }
-
-      //hvis man når til break4 ned gør dette
-      if (window.pageYOffset > break4) {
-        document.querySelector(".last_wrap").style.transform = "translateY(" + wrapSpeed5 + "px)";
-      }
+    //hvis man når til break4 ned gør dette
+    if (window.pageYOffset > break4) {
+      document.querySelector(".section_class5").classList.remove("lift_back");
+      document.querySelector(".section_class5").classList.add("lift");
+    } else {
+      document.querySelector(".section_class5").classList.remove("lift");
+      document.querySelector(".section_class5").classList.add("lift_back");
     }
   }
+
 }
