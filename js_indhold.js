@@ -11,7 +11,6 @@ function loadedState() {
     document.querySelector(".main_h1_1").classList.add("center_ani_before");
     document.querySelector(".main_h1_2").classList.add("center_ani_before");
     document.querySelector(".main_h1_3").classList.add("center_ani_before2");
-
   }, 100);
 
   setTimeout(function () {
@@ -23,10 +22,11 @@ function loadedState() {
 
   setTimeout(function () {
     document.querySelector(".burger_wrap").classList.add("right_push2");
+    document.querySelector(".to_top_wrap").classList.add("left_push2");
+    document.querySelector(".to_top_wrap").style.visibility = "visible";
     document.querySelector(".logo_wrap").classList.add("top_push_menu");
     document.querySelector(".logo_wrap").style.transform = "translateX(30px) translateY(237px)"
     document.querySelector(".bg_front_left").classList.add("sub_intro_push");
-    document.querySelector(".bg_front_right").classList.add("sub_intro_push");
   }, 200);
 
   setTimeout(function () {
@@ -39,9 +39,13 @@ function loadedState() {
 
     document.body.style.overflow = "visible";
     showScroll();
+
     document.querySelector(".scroll_wrap").classList.remove("push_scroll");
     document.querySelector(".scroll_wrap").classList.add("push_scroll_back");
     document.querySelector(".scroll_wrap").style.visibility = "visible";
+
+    document.querySelector(".scroll_wrap").addEventListener("click", scrollDown);
+    document.querySelector(".to_top_wrap").addEventListener("click", scrollToTop);
   }, 500);
 
   setTimeout(function () {
@@ -58,6 +62,30 @@ function loadedState() {
     document.querySelector(".main_h1_2").classList.remove("center_ani3");
     document.querySelector(".main_h1_3").classList.remove("center_ani4");
   }, 1500);
+}
+
+function scrollDown() {
+  console.log("scrollDown log");
+  window.scroll({
+    top: 900,
+    left: 0,
+    behavior: 'smooth'
+  });
+}
+
+function scrollToTop() {
+  console.log("scrollToTop log");
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+
+  if (window.matchMedia("(min-width: 1060px)").matches) {
+    return;
+  } else {
+    menuHide();
+  }
 }
 
 document.querySelector(".nav3").addEventListener("click", purpleOutro);
@@ -110,16 +138,19 @@ function menuShow() {
 
 
   document.querySelector(".burger_wrap").classList.remove("menu_push_right");
+  document.querySelector(".to_top_wrap").classList.remove("menu_push_right");
   document.querySelector(".bg_wrapper_right").classList.remove("menu_push_right");
   document.querySelector(".nav").classList.remove("menu_push_right");
   document.querySelector(".bg_wrapper_right").classList.remove("right_push");
   document.querySelector(".burger_wrap").classList.remove("right_push2");
   document.querySelector(".burger_wrap").style.right = "0px";
   document.querySelector(".bg_wrapper_right").style.right = "-300px";
+  document.querySelector(".to_top_wrap").classList.remove("left_push2");
 
   document.querySelector(".burger_wrap").classList.add("menu_push_left");
   document.querySelector(".bg_wrapper_right").classList.add("menu_push_left");
   document.querySelector(".nav").classList.add("menu_push_left");
+  document.querySelector(".to_top_wrap").classList.add("menu_push_left");
 
   document.querySelector(".burger1").classList.remove("burger1_cross_off");
   document.querySelector(".burger2").classList.remove("burger2_cross_off");
@@ -154,10 +185,12 @@ function menuHide() {
   document.querySelector(".burger_wrap").classList.remove("menu_push_left");
   document.querySelector(".bg_wrapper_right").classList.remove("menu_push_left");
   document.querySelector(".nav").classList.remove("menu_push_left");
+  document.querySelector(".to_top_wrap").classList.remove("menu_push_left");
 
   document.querySelector(".burger_wrap").classList.add("menu_push_right");
   document.querySelector(".bg_wrapper_right").classList.add("menu_push_right");
   document.querySelector(".nav").classList.add("menu_push_right");
+  document.querySelector(".to_top_wrap").classList.add("menu_push_right");
 
   document.querySelector(".burger1").classList.remove("burger1_cross_on");
   document.querySelector(".burger2").classList.remove("burger2_cross_on");

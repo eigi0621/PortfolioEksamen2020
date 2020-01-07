@@ -186,6 +186,20 @@
   }
 }
 
+.left_push2 {
+  animation: left_push2-kf 1s cubic-bezier(.3, 0, .2, 1) both;
+}
+
+@keyframes left_push2-kf {
+  0% {
+    transform: translateX(-100px) translateY(0px);
+  }
+
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
 .top_push_menu {
   animation: top_push_menu-kf 1s cubic-bezier(.3, 0, .2, 1) both;
 }
@@ -552,19 +566,19 @@
 
 @keyframes scroll1_ani-kf {
   100% {
-    transform: translateX(-1px)translateY(-30px);
+    transform: translateX(24px)translateY(35px);
     height: 20px;
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   50% {
-    transform: translateX(-1px)translateY(-25px);
+    transform: translateX(24px)translateY(40px);
     height: 30px;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   0% {
-    transform: translateX(-1px)translateY(-10px);
+    transform: translateX(24px)translateY(55px);
     height: 20px;
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
@@ -576,19 +590,19 @@
 
 @keyframes scroll2_ani-kf {
   100% {
-    transform: translateX(2px)translateY(-18px) rotate(45deg);
+    transform: translateX(27px)translateY(47px) rotate(45deg);
     height: 10px;
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   50% {
-    transform: translateX(2px)translateY(-3px) rotate(45deg);
+    transform: translateX(27px)translateY(62px) rotate(45deg);
     height: 10px;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   0% {
-    transform: translateX(2px)translateY(2px) rotate(45deg);
+    transform: translateX(27px)translateY(67px) rotate(45deg);
     height: 10px;
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
@@ -600,19 +614,19 @@
 
 @keyframes scroll3_ani-kf {
   100% {
-    transform: translateX(-4px)translateY(-18px) rotate(-45deg);
+    transform: translateX(21px)translateY(47px) rotate(-45deg);
     height: 10px;
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   50% {
-    transform: translateX(-4px)translateY(-3px) rotate(-45deg);
+    transform: translateX(21px)translateY(62px) rotate(-45deg);
     height: 10px;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   0% {
-    transform: translateX(-4px)translateY(2px) rotate(-45deg);
+    transform: translateX(21px)translateY(67px) rotate(-45deg);
     height: 10px;
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
@@ -624,17 +638,17 @@
 
 @keyframes scroll_title_ani-kf {
   100% {
-    transform: translateX(-25px)translateY(-45px);
+    transform: translateX(0px)translateY(20px);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   50% {
-    transform: translateX(-25px)translateY(-42px);
+    transform: translateX(0px)translateY(23px);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   0% {
-    transform: translateX(-25px)translateY(-35px);
+    transform: translateX(0px)translateY(30px);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 }
@@ -649,7 +663,7 @@
   }
 
   100% {
-    transform: translateY(150px);
+    transform: translateY(200px);
   }
 }
 
@@ -659,7 +673,7 @@
 
 @keyframes push_scroll_back-kf {
   0% {
-    transform: translateY(150px);
+    transform: translateY(200px);
   }
 
   100% {

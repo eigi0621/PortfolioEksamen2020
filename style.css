@@ -15,7 +15,7 @@ body {
   font-family: PidgeonSans;
   font-size: 1.5rem;
   font-variation-settings: 'wght'300;
-  color: #111111;
+  color: #151515;
   background-color: #FFFFFF;
 
   -ms-overflow-style: none;
@@ -27,7 +27,7 @@ body::-webkit-scrollbar {
 }
 
 .main_scroller {
-  height: 1700px;
+  height: 2500px;
   margin: 0 30px;
 }
 
@@ -45,56 +45,56 @@ body::-webkit-scrollbar {
 }
 
 .space4 {
-  height: 150px;
+  height: 170px;
 }
 
 /*FARVER-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .green_c {
-  color: #07DD5E;
+  color: #28BF77;
 }
 
 .green_b {
-  background-color: #07DD5E;
+  background-color: #28BF77;
   background-image: url(assets/images/bg_tile2.svg);
   background-size: 1002px;
 }
 
 .blue_c {
-  color: #0ab6ea;
+  color: #52ACCC;
 }
 
 .blue_b {
-  background-color: #0ab6ea;
+  background-color: #52ACCC;
   background-image: url(assets/images/bg_tile2.svg);
   background-size: 1002px;
 }
 
 .purple_c {
-  color: #5525f5;
+  color: #4A4AA5;
 }
 
 .purple_b {
-  background-color: #5525f5;
+  background-color: #4A4AA5;
   background-image: url(assets/images/bg_tile2.svg);
   background-size: 1002px;
 }
 
 .red_c {
-  color: #EF293D;
+  color: #BC4257;
 }
 
 .red_b {
-  background-color: #EF293D;
+  background-color: #BC4257;
   background-image: url(assets/images/bg_tile2.svg);
   background-size: 1002px;
 }
 
 .yellow_c {
-  color: #ffbe0e;
+  color: #F4AE4A;
 }
 
 .yellow_b {
-  background-color: #ffbe0e;
+  background-color: #F4AE4A;
   background-image: url(assets/images/bg_tile2.svg);
   background-size: 1002px;
 }
@@ -116,11 +116,11 @@ body::-webkit-scrollbar {
 }
 
 .black_c {
-  color: #111111;
+  color: #151515;
 }
 
 .black_b {
-  background-color: #111111;
+  background-color: #151515;
 }
 
 /*TEKST STILE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -202,7 +202,7 @@ h2::selection,
 h3::selection,
 p::selection,
 span::selection {
-  color: #111111;
+  color: #151515;
   background-color: #FFFFFF;
 }
 
@@ -255,7 +255,7 @@ nav {
 nav a {
   font-size: 2rem;
   text-decoration: none;
-  color: #111111;
+  color: #151515;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
   flex-basis: 100rem;
@@ -329,12 +329,13 @@ nav a {
   align-items: center;
   visibility: visible;
   transform: translateX(-5px) translateY(-85px);
+  cursor: pointer;
 }
 
 .burger1 {
   width: 20px;
   height: 2px;
-  background-color: #111111;
+  background-color: #151515;
   transform: translateX(0px) translateY(-5px);
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
@@ -343,7 +344,7 @@ nav a {
 .burger2 {
   width: 20px;
   height: 2px;
-  background-color: #111111;
+  background-color: #151515;
   transform: translateX(6px) translateY(0px);
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
@@ -352,7 +353,7 @@ nav a {
 .burger3 {
   width: 20px;
   height: 2px;
-  background-color: #111111;
+  background-color: #151515;
   transform: translateX(3px) translateY(5px);
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
@@ -411,39 +412,98 @@ nav a {
 }
 
 .scroll_wrap {
+  width: 50px;
+  height: 80px;
   visibility: hidden;
+  cursor: pointer;
 }
 
 .scroll1 {
   position: fixed;
   width: 2px;
   height: 20px;
-  transform: translateX(-11px)translateY(-30px);
 }
 
 .scroll2 {
   position: fixed;
   width: 2px;
   height: 10px;
-  transform: translateX(-8px)translateY(-18px) rotate(45deg);
 }
 
 .scroll3 {
   position: fixed;
   width: 2px;
   height: 10px;
-  transform: translateX(-14px)translateY(-18px) rotate(-45deg);
 }
 
 .scroll_title {
   position: fixed;
   font-family: PidgeonSans;
   font-size: .6rem;
-  transform: translateX(-25px) translateY(-60px);
-  font-variation-settings: 'wght'900;
+  font-variation-settings: 'wght'800;
   letter-spacing: 3px;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+}
+
+/*TO TOP-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.to_top_pos {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 7;
+  visibility: hidden;
+  transform: translateX(195px) translateY(-5px);
+}
+
+.to_top_wrap {
+  width: 70px;
+  height: 70px;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.to_top1 {
+  position: fixed;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  width: 2px;
+  height: 20px;
+  transform: translateX(24px)translateY(28px);
+}
+
+.to_top2 {
+  position: fixed;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  width: 2px;
+  height: 10px;
+  transform: translateX(27px)translateY(25px) rotate(-45deg);
+}
+
+.to_top3 {
+  position: fixed;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  width: 2px;
+  height: 10px;
+  transform: translateX(21px)translateY(25px) rotate(45deg);
+}
+
+.to_top_title {
+  position: fixed;
+  font-family: PidgeonSans;
+  font-size: .4rem;
+  font-variation-settings: 'wght'800;
+  letter-spacing: 3px;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.3, 0, .2, 1);
+  transform: translateX(30px)translateY(30px) rotate(-90deg);
 }
 
 /*HVIDE FORGRUNDE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -538,7 +598,7 @@ nav a {
 
 .selvportraet {
   height: 800px;
-  background-image: url(assets/images/selvportraet2.jpg);
+  background-image: url(assets/images/selvportraet3.jpg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -655,7 +715,7 @@ nav a {
 
 .keasans {
   height: 100vw;
-  background-image: url(assets/images/keasans_1.svg);
+  background-image: url(assets/images/keasans2.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1052,4 +1112,25 @@ nav a {
   .logo_wrap p {
     visibility: visible;
   }
+
+  .to_top_pos {
+    justify-content: flex-start;
+    transform: translateX(5px) translateY(-85px);
+  }
+
+  .to_top_wrap:hover .to_top1 {
+    height: 39px;
+    transform: translateX(24px)translateY(18px);
+  }
+
+  .to_top_wrap:hover .to_top2 {
+    height: 10px;
+    transform: translateX(27px)translateY(15px) rotate(-45deg);
+  }
+
+  .to_top_wrap:hover .to_top3 {
+    height: 10px;
+    transform: translateX(21px)translateY(15px) rotate(45deg);
+  }
+
 }
