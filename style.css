@@ -1,3 +1,4 @@
+/*MAIN STYLES-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +26,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.main_scroller {
+  height: 1700px;
+  margin: 0 30px;
+}
+
+/*SPACING-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .space1 {
   height: 25px;
 }
@@ -41,26 +48,15 @@ body::-webkit-scrollbar {
   height: 200px;
 }
 
-h1::selection,
-h2::selection,
-h3::selection,
-p::selection,
-span::selection {
-  color: #111111;
-  background-color: #FFFFFF;
-}
-
-.main_scroller {
-  height: 1700px;
-  margin: 0 30px;
-}
-
+/*FARVER-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .green_c {
   color: #07DD5E;
 }
 
 .green_b {
   background-color: #07DD5E;
+  background-image: url(assets/images/bg_tile2.svg);
+  background-size: 1002px;
 }
 
 .blue_c {
@@ -69,6 +65,8 @@ span::selection {
 
 .blue_b {
   background-color: #0ab6ea;
+  background-image: url(assets/images/bg_tile2.svg);
+  background-size: 1002px;
 }
 
 .purple_c {
@@ -77,6 +75,8 @@ span::selection {
 
 .purple_b {
   background-color: #5525f5;
+  background-image: url(assets/images/bg_tile2.svg);
+  background-size: 1002px;
 }
 
 .red_c {
@@ -85,6 +85,8 @@ span::selection {
 
 .red_b {
   background-color: #EF293D;
+  background-image: url(assets/images/bg_tile2.svg);
+  background-size: 1002px;
 }
 
 .yellow_c {
@@ -93,6 +95,8 @@ span::selection {
 
 .yellow_b {
   background-color: #ffbe0e;
+  background-image: url(assets/images/bg_tile2.svg);
+  background-size: 1002px;
 }
 
 .white_c {
@@ -119,13 +123,12 @@ span::selection {
   background-color: #111111;
 }
 
-
-
+/*TEKST STILE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 h1 {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 6rem;
+  font-size: 5.5rem;
   font-weight: 700;
   font-variation-settings: 'wght'800;
   letter-spacing: 1px;
@@ -138,45 +141,11 @@ h1:hover {
   font-variation-settings: 'wght'300;
 }
 
-.main_h1_1,
-.main_h1_2 {
-  color: #111111;
-}
-
-.center_wrap {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-}
-
-.center_h1 {
-  visibility: hidden;
-}
-
-.web-text_wrapper1 h1,
-.ux-text_wrapper1 h1,
-.indhold-text_wrapper1 h1 {
-  font-size: 3rem;
-  font-variation-settings: 'wght'300;
-  letter-spacing: 0px;
-  line-height: 3rem;
-}
-
-.web-text_wrapper1 h1:hover,
-.ux-text_wrapper1 h1:hover,
-.indhold-text_wrapper1 h1:hover {
-  font-variation-settings: 'wght'500;
-}
-
 h2 {
   font-family: PidgeonSans;
   transition: 0s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   font-variation-settings: 'wght'600;
   letter-spacing: 0px;
@@ -191,7 +160,7 @@ h3 {
   font-family: PidgeonSans;
   transition: .4s;
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 700;
   font-variation-settings: 'wght'400;
   letter-spacing: 0px;
@@ -228,21 +197,38 @@ a {
   padding-top: 10px;
 }
 
-.logo_wrap {
-  height: 100vh;
-  width: calc(100vw - 50px);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: fixed;
-  z-index: 10;
-  visibility: hidden;
-  transform: translateX(100px) translateY(20px);
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection,
+span::selection {
+  color: #111111;
+  background-color: #FFFFFF;
 }
 
-.logo_wrap p {
-  visibility: visible;
-  font-size: 1rem;
+.center_wrap {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.center_h1 {
+  visibility: hidden;
+}
+
+.main_h1_3 {
+  font-size: 3rem;
+  font-variation-settings: 'wght'300;
+  letter-spacing: 0px;
+  line-height: 3rem;
+}
+
+.main_h1_3:hover {
+  font-variation-settings: 'wght'500;
 }
 
 .no_trans {
@@ -253,69 +239,7 @@ a {
   font-variation-settings: 'wght'600;
 }
 
-.green_outro {
-  width: 0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-}
-
-.red_outro {
-  width: 0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-}
-
-.blue_outro {
-  width: 0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-}
-
-.purple_outro {
-  width: 0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-}
-
-.yellow_outro {
-  width: 0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*NAVIGATION-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 nav {
   height: 380px;
   position: fixed;
@@ -341,7 +265,6 @@ nav a {
   font-variation-settings: 'wght'500;
 }
 
-
 .behind_nav1,
 .behind_nav2,
 .behind_nav3,
@@ -355,8 +278,6 @@ nav a {
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
   margin: 10px 0;
 }
-
-
 
 .nav a:hover {
   font-variation-settings: 'wght'500;
@@ -382,10 +303,7 @@ nav a {
   width: 6.6rem;
 }
 
-
-
-
-
+/*BURGER MENU-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .burger_wrap {
   height: 100vh;
   width: 100vw;
@@ -478,13 +396,7 @@ nav a {
   transform: translateX(3px) translateY(5px) rotate(0);
 }
 
-
-
-
-
-
-
-
+/*SCROLL-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .scroll_pos {
   width: 100vw;
   height: calc(100vh - 100px);
@@ -534,11 +446,7 @@ nav a {
   transition-timing-function: cubic-bezier(.3, 0, .2, 1);
 }
 
-
-
-
-
-
+/*HVIDE FORGRUNDE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .bg_wrapper_top,
 .bg_wrapper_bottom {
   height: 330px;
@@ -615,37 +523,7 @@ nav a {
   width: 25vw;
 }
 
-
-
-
-
-
-
-
-
-
-.green_overlay {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 4;
-  visibility: hidden;
-}
-
-.green_intro {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 20;
-}
-
-.space_top {
-  margin-top: -600px;
-}
-
+/*BILLEDER OG DERES WRAPPERE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .selvportraet,
 .portvin,
 .pidgeonsans,
@@ -686,7 +564,7 @@ nav a {
 
 .pidgeonsans {
   height: 1500px;
-  background-image: url(assets/images/pidgeon2.svg);
+  background-image: url(assets/images/pidgeon3.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -775,7 +653,6 @@ nav a {
   transform-origin: center;
 }
 
-
 .keasans {
   height: 100vw;
   background-image: url(assets/images/keasans_1.svg);
@@ -789,6 +666,7 @@ nav a {
   transform-origin: center;
 }
 
+/*KNAPPER-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .button_wrap {
   margin: 20px 10px 0 0;
   width: 12rem;
@@ -852,7 +730,8 @@ nav a {
   transform-origin: right;
 }
 
-.col_wrapper {
+/*SEKTIONERNE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.section_class {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -865,10 +744,10 @@ nav a {
   transform-origin: top left;
 }
 
-.col_wrapper2,
-.col_wrapper3,
-.col_wrapper4,
-.col_wrapper5 {
+.section_class2,
+.section_class3,
+.section_class4,
+.section_class5 {
   margin-top: -201px;
 }
 
@@ -902,20 +781,20 @@ nav a {
   margin-bottom: 0px;
 }
 
-.col_wrapper h1 {
+.section_class h1 {
   margin-bottom: 2rem;
 }
 
-.col_wrapper p span {
+.section_class p span {
   font-size: 1.7rem;
   font-variation-settings: 'wght'500;
 }
 
-.col_wrapper h2 {
+.section_class h2 {
   flex-basis: 100vw;
 }
 
-.col_wrapper5 {
+.section_class5 {
   width: 100vw;
   top: 0;
   position: relative;
@@ -934,8 +813,64 @@ nav a {
   visibility: hidden;
 }
 
+/*TOP LOGO-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.logo_wrap {
+  height: 100vh;
+  width: calc(100vw - 50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 10;
+  visibility: hidden;
+  transform: translateX(100px) translateY(20px);
+}
 
-@media only screen and (min-width: 800px) {
+.logo_wrap p {
+  visibility: visible;
+  font-size: 1rem;
+}
+
+/*INTRO-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.green_overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 4;
+  visibility: hidden;
+  background-image: none;
+}
+
+.green_intro {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+}
+
+.space_top {
+  margin-top: -600px;
+}
+
+/*OUTRO-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.green_outro,
+.red_outro,
+.blue_outro,
+.purple_outro,
+.yellow_outro {
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/*MEDIAQUERIES-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1060px) {
   h1 {
     font-size: 10rem;
     line-height: 8rem;
@@ -971,7 +906,7 @@ nav a {
     font-size: 1.7rem;
   }
 
-  .col_wrapper p span {
+  .section_class p span {
     font-size: 3rem;
     line-height: 2.7rem;
     font-variation-settings: 'wght'500;
@@ -1106,9 +1041,7 @@ nav a {
     transform: translateX(-25px);
   }
 
-  .web-text_wrapper1 h1,
-  .ux-text_wrapper1 h1,
-  .indhold-text_wrapper1 h1 {
+  .main_h1_3 {
     font-size: 5rem;
     line-height: 5rem;
   }

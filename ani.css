@@ -1,3 +1,4 @@
+/*CENTER-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .center_ani_before {
   animation: center_ani_before-kf .5s cubic-bezier(.3, 0, .2, 1) both;
 }
@@ -54,22 +55,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .center_ani1 {
   animation: center_ani1-kf 1s cubic-bezier(.3, 0, .2, 1) both;
 }
@@ -98,22 +83,7 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*MENU-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .menu_push_left {
   animation-name: menu_push_left-kf;
   animation-duration: 1s;
@@ -145,7 +115,6 @@
     transform: translateX(0);
   }
 }
-
 
 .top_push {
   animation: top_push-kf 1s cubic-bezier(.3, 0, .2, 1) both;
@@ -301,6 +270,39 @@
   }
 }
 
+.green_overlay_on {
+  animation: green_overlay_on-kf 1s cubic-bezier(.3, 0, .2, 1) both;
+}
+
+@keyframes green_overlay_on-kf {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: .8;
+    visibility: visible;
+  }
+}
+
+.green_overlay_off {
+  animation: green_overlay_off-kf 1s cubic-bezier(.3, 0, .2, 1) both;
+}
+
+@keyframes green_overlay_off-kf {
+  0% {
+    opacity: .8;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*INTRO-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .intro_push {
   animation: intro_push-kf 1s cubic-bezier(.3, 0, .2, 1) both;
 }
@@ -357,16 +359,11 @@
   }
 }
 
-
-
-
-
-
-.green_overlay_on {
-  animation: green_overlay_on-kf 1s cubic-bezier(.3, 0, .2, 1) both;
+.green_intro_on {
+  animation: green_intro_on-kf 2s cubic-bezier(.3, 0, .2, 1) both;
 }
 
-@keyframes green_overlay_on-kf {
+@keyframes green_intro_on-kf {
   0% {
     opacity: 0;
     visibility: hidden;
@@ -378,22 +375,92 @@
   }
 }
 
-.green_overlay_off {
-  animation: green_overlay_off-kf 1s cubic-bezier(.3, 0, .2, 1) both;
+.green_intro_off {
+  animation: green_intro_off-kf .1s cubic-bezier(.3, 0, .2, 1) both;
 }
 
-@keyframes green_overlay_off-kf {
+@keyframes green_intro_off-kf {
   0% {
-    opacity: .8;
     visibility: visible;
   }
 
   100% {
-    opacity: 0;
     visibility: hidden;
   }
 }
 
+/*OUTRO-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.green_outro_ani {
+  animation: green_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
+}
+
+@keyframes green_outro_ani-kf {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+.red_outro_ani {
+  animation: red_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
+}
+
+@keyframes red_outro_ani-kf {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+.blue_outro_ani {
+  animation: blue_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
+}
+
+@keyframes blue_outro_ani-kf {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+.purple_outro_ani {
+  animation: purple_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
+}
+
+@keyframes purple_outro_ani-kf {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+.yellow_outro_ani {
+  animation: yellow_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
+}
+
+@keyframes yellow_outro_ani-kf {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+/*VINDUE OG BREAK-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .window_show {
   animation: window_show-kf 1s cubic-bezier(.3, 0, .2, 1) both;
 }
@@ -478,36 +545,7 @@
   }
 }
 
-.green_intro_on {
-  animation: green_intro_on-kf 2s cubic-bezier(.3, 0, .2, 1) both;
-}
-
-@keyframes green_intro_on-kf {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  100% {
-    opacity: .8;
-    visibility: visible;
-  }
-}
-
-.green_intro_off {
-  animation: green_intro_off-kf .1s cubic-bezier(.3, 0, .2, 1) both;
-}
-
-@keyframes green_intro_off-kf {
-  0% {
-    visibility: visible;
-  }
-
-  100% {
-    visibility: hidden;
-  }
-}
-
+/*SCROLL-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .scroll1_ani {
   animation: scroll1_ani-kf 1s infinite alternate both;
 }
@@ -626,75 +664,5 @@
 
   100% {
     transform: translateY(0);
-  }
-}
-
-.green_outro_ani {
-  animation: green_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
-}
-
-@keyframes green_outro_ani-kf {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100vw;
-  }
-}
-
-.red_outro_ani {
-  animation: red_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
-}
-
-@keyframes red_outro_ani-kf {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100vw;
-  }
-}
-
-.blue_outro_ani {
-  animation: blue_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
-}
-
-@keyframes blue_outro_ani-kf {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100vw;
-  }
-}
-
-.purple_outro_ani {
-  animation: purple_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
-}
-
-@keyframes purple_outro_ani-kf {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100vw;
-  }
-}
-
-.yellow_outro_ani {
-  animation: yellow_outro_ani-kf .5s cubic-bezier(.3, .5, .2, 1) both;
-}
-
-@keyframes yellow_outro_ani-kf {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100vw;
   }
 }
