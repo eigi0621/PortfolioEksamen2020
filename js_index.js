@@ -3,13 +3,12 @@ document.body.style.overflow = "hidden";
 
 //lyt til hvornår vinduet er loaded
 window.addEventListener("load", loadedState);
-window.scrollTo(0, 0);
 
 function loadedState() {
-
   setTimeout(function () {
     //scroll til toppen
     window.scrollTo(0, 0);
+
     document.querySelector(".scroll_wrap").classList.add("push_scroll");
     document.querySelector(".green_intro").classList.add("green_intro_off");
     document.querySelector(".main_h1_1").classList.add("center_ani_before");
@@ -193,6 +192,7 @@ function menuHide() {
 
 //lyt til om der bliver scrollet
 function showScroll() {
+  console.log("lel");
   window.onscroll = function (e) {
     console.log(window.pageYOffset);
 
@@ -224,7 +224,7 @@ function showScroll() {
     var break1 = document.querySelector(".section_class2").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
     var break2 = document.querySelector(".section_class3").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
     var break3 = document.querySelector(".section_class4").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
-    var break4 = document.querySelector(".section_class5").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
+    var break4 = document.querySelector(".footer_class").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
 
     //definer translateY værdi (pageYOffset gange den ønskede scroll-hastighed fra før minus break gange scrollhastighed - så den ikke springer fra den starter)
     var imgSpeed = window.pageYOffset * speedOfImg - 100 * speedOfImg;
@@ -246,10 +246,10 @@ function showScroll() {
       document.querySelector(".section_class2").style.padding = "100px " + colWrapperPadding + "px";
       document.querySelector(".section_class3").style.padding = "100px " + colWrapperPadding + "px";
       document.querySelector(".section_class4").style.padding = "100px " + colWrapperPadding + "px";
-      document.querySelector(".section_class5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".footer_class").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
     } else {
       //ellers sæt footerens padding til dette
-      document.querySelector(".section_class5").style.padding = "50px 10px 10px 10px";
+      document.querySelector(".footer_class").style.padding = "50px 10px 10px 10px";
     }
 
     //hvis man scroller mere end 1px ned gør dette
@@ -337,11 +337,11 @@ function showScroll() {
 
     //hvis man når til break4 ned gør dette
     if (window.pageYOffset > break4) {
-      document.querySelector(".section_class5").classList.remove("lift_back");
-      document.querySelector(".section_class5").classList.add("lift");
+      document.querySelector(".footer_class").classList.remove("lift_back");
+      document.querySelector(".footer_class").classList.add("lift");
     } else {
-      document.querySelector(".section_class5").classList.remove("lift");
-      document.querySelector(".section_class5").classList.add("lift_back");
+      document.querySelector(".footer_class").classList.remove("lift");
+      document.querySelector(".footer_class").classList.add("lift_back");
     }
   }
 

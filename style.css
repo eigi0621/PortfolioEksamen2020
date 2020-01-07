@@ -747,7 +747,7 @@ nav a {
 .section_class2,
 .section_class3,
 .section_class4,
-.section_class5 {
+.footer_class {
   margin-top: -201px;
 }
 
@@ -794,7 +794,7 @@ nav a {
   flex-basis: 100vw;
 }
 
-.section_class5 {
+.footer_class {
   width: 100vw;
   top: 0;
   position: relative;

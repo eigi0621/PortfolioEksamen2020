@@ -1,12 +1,11 @@
 document.body.style.overflow = "hidden";
 
 window.addEventListener("load", loadedState);
-window.scrollTo(0, 0);
 
 function loadedState() {
-  window.scrollTo(0, 0);
-
   setTimeout(function () {
+    window.scrollTo(0, 0);
+
     document.querySelector(".scroll_wrap").classList.add("push_scroll");
     document.querySelector(".green_intro").classList.add("green_intro_off");
     document.querySelector(".main_h1_1").classList.add("center_ani_before");
@@ -200,7 +199,7 @@ function showScroll() {
     }
 
     var break1 = document.querySelector(".section_class2").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
-    var break2 = document.querySelector(".section_class5").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
+    var break2 = document.querySelector(".footer_class").getBoundingClientRect().top + window.pageYOffset - window.innerHeight;
 
     var imgSpeed3 = window.pageYOffset * speedOfImg1 - break1 * speedOfImg1 + 100;
     var wrapSpeed3 = window.pageYOffset * speedOfWrap1 - break1 * speedOfWrap1;
@@ -211,9 +210,9 @@ function showScroll() {
     if (window.matchMedia("(min-width: 1060px)").matches) {
       document.querySelector(".section_class1").style.padding = "100px " + colWrapperPadding + "px";
       document.querySelector(".section_class2").style.padding = "100px " + colWrapperPadding + "px";
-      document.querySelector(".section_class5").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
+      document.querySelector(".footer_class").style.padding = "200px " + colWrapperPadding + "px 100px " + colWrapperPadding + "px";
     } else {
-      document.querySelector(".section_class5").style.padding = "50px 10px 10px 10px";
+      document.querySelector(".footer_class").style.padding = "50px 10px 10px 10px";
     }
 
     if (window.pageYOffset > 1) {
@@ -270,11 +269,11 @@ function showScroll() {
     }
 
     if (window.pageYOffset > break2) {
-      document.querySelector(".section_class5").classList.remove("lift_back");
-      document.querySelector(".section_class5").classList.add("lift");
+      document.querySelector(".footer_class").classList.remove("lift_back");
+      document.querySelector(".footer_class").classList.add("lift");
     } else {
-      document.querySelector(".section_class5").classList.remove("lift");
-      document.querySelector(".section_class5").classList.add("lift_back");
+      document.querySelector(".footer_class").classList.remove("lift");
+      document.querySelector(".footer_class").classList.add("lift_back");
 
     }
   }
